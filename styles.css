@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+:root {
+  --paper: #fff9ec;
+  --ink: #3d2f2a;
+  --ink-soft: #6f5b52;
+  --coral: #ef6f6c;
+  --teal: #2a9d8f;
+  --sun: #f2a541;
+  --sky: #5b9bd5;
+  --plum: #9b5de5;
+  --line: #f0dfc0;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: 'Nunito', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  background-color: #f8eeda;
+  background-image: radial-gradient(rgba(150, 110, 70, .14) 1.2px, transparent 1.2px);
+  background-size: 22px 22px;
+  padding-bottom: 2rem;
+}
+
+h1, h2, h3 { font-family: 'Baloo 2', 'Trebuchet MS', cursive, sans-serif; line-height: 1.15; }
+
+/* ---------- Top bar ---------- */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .6rem clamp(.8rem, 3vw, 1.6rem);
+  background: rgba(255, 249, 236, .94);
+  backdrop-filter: blur(6px);
+  border-bottom: 3px dashed var(--line);
+}
+
+.home-link {
+  text-decoration: none;
+  color: var(--ink);
+  font-weight: 700;
+  background: #fff;
+  border: 2px solid var(--line);
+  padding: .35rem .9rem;
+  border-radius: 999px;
+  box-shadow: 0 3px 0 #e8d6b6;
+  transition: transform .12s;
+}
+.home-link:hover { transform: translateY(-1px); }
+
+.progress {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: .25rem;
+  font-size: .78rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.bar {
+  display: block;
+  width: 120px;
+  height: 8px;
+  border-radius: 99px;
+  background: #ecdcbe;
+  overflow: hidden;
+}
+.bar i {
+  display: block;
+  height: 100%;
+  width: 0;
+  border-radius: 99px;
+  background: linear-gradient(90deg, var(--sun), var(--coral));
+  transition: width .9s ease;
+}
+
+/* ---------- Story page ---------- */
+.page {
+  position: relative;
+  max-width: 780px;
+  margin: clamp(1.2rem, 4vw, 2.5rem) auto 2.5rem;
+  padding: clamp(1.4rem, 4.5vw, 3.2rem);
+  background: var(--paper);
+  border: 3px solid var(--line);
+  border-radius: 28px;
+  box-shadow: 0 22px 0 -10px #e9d7b8, 0 30px 60px rgba(120, 85, 45, .16);
+  animation: pageIn .55s cubic-bezier(.2, .8, .3, 1) both;
+}
+.page::before {
+  content: '';
+  position: absolute;
+  inset: 12px;
+  border: 2px dashed #f2e4cb;
+  border-radius: 20px;
+  pointer-events: none;
+}
+
+@keyframes pageIn {
+  from { opacity: 0; transform: translateY(18px) rotate(-.6deg); }
+  to   { opacity: 1; transform: none; }
+}
+
+.chapter-tag {
+  display: inline-block;
+  font-family: 'Baloo 2', cursive;
+  font-weight: 800;
+  font-size: .8rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--teal);
+  padding: .28rem .95rem;
+  border-radius: 999px;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, .12);
+}
+
+.story-title {
+  font-size: clamp(2rem, 6vw, 3rem);
+  margin: .7rem 0 .1rem;
+  color: #2f2622;
+}
+
+.story-sub {
+  margin: 0 0 1rem;
+  font-weight: 700;
+  color: var(--coral);
+  letter-spacing: .03em;
+}
+
+.illustration {
+  display: grid;
+  place-items: center;
+  width: clamp(96px, 22vw, 132px);
+  height: clamp(96px, 22vw, 132px);
+  margin: .4rem auto 1.4rem;
+  font-size: clamp(2.6rem, 8vw, 3.6rem);
+  background: radial-gradient(circle at 30% 25%, #ffffff, #ffeccc 72%);
+  border: 3px solid var(--line);
+  border-radius: 50%;
+  box-shadow: 0 10px 0 -4px #ecd9b9;
+}
+
+.story-text p { margin: 0 0 1.05rem; }
+
+.story-text p:first-of-type::first-letter {
+  float: left;
+  font-family: 'Baloo 2', cursive;
+  font-size: 3.4rem;
+  line-height: .85;
+  padding: .12em .12em 0 0;
+  color: var(--coral);
+}
+
+/* ---------- Callouts ---------- */
+.callout {
+  margin: 1.5rem 0;
+  padding: 1rem 1.2rem;
+  border-radius: 18px;
+  border: 3px dashed;
+  background: #fff;
+}
+.callout h2 {
+  margin: 0 0 .45rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+}
+.callout p { margin: 0 0 .5rem; }
+.callout p:last-child { margin-bottom: 0; }
+
+.big-idea { border-color: #ffd9a8; background: #fffaf0; }
+.big-idea h2 { color: var(--sun); }
+
+.try-it { border-color: #bfe3dd; background: #f2fbf9; }
+.try-it h2 { color: var(--teal); }
+
+/* ---------- Page navigation ---------- */
+.page-nav {
+  display: flex;
+  gap: .8rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.btn {
+  font-family: 'Baloo 2', cursive;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--ink);
+  background: #fff;
+  border: 3px solid var(--line);
+  padding: .55rem 1.15rem;
+  border-radius: 999px;
+  box-shadow: 0 5px 0 #e9d7b8;
+  transition: transform .12s, box-shadow .12s;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 7px 0 #e9d7b8; }
+.btn:active { transform: translateY(3px); box-shadow: 0 2px 0 #e9d7b8; }
+.btn.next { background: #fff5e0; border-color: #f4d9a8; }
+
+.key-hint {
+  text-align: center;
+  font-size: .8rem;
+  color: #a08b7a;
+  margin: 1.1rem 0 0;
+}
+
+/* ---------- Cover ---------- */
+.cover {
+  position: relative;
+  max-width: 780px;
+  margin: clamp(1.5rem, 5vw, 3rem) auto 0;
+  text-align: center;
+  padding: clamp(1.6rem, 5vw, 3rem) clamp(1rem, 4vw, 2rem);
+  background: var(--paper);
+  border: 3px solid var(--line);
+  border-radius: 32px;
+  box-shadow: 0 22px 0 -10px #e9d7b8, 0 30px 60px rgba(120, 85, 45, .16);
+  overflow: hidden;
+  animation: pageIn .6s cubic-bezier(.2, .8, .3, 1) both;
+}
+.cover .book-emoji { font-size: clamp(3rem, 12vw, 4.5rem); display: block; }
+.cover .stars { letter-spacing: .5em; color: var(--sun); font-size: 1.1rem; }
+.cover h1 { font-size: clamp(2.1rem, 8vw, 3.9rem); margin: .2rem 0; }
+.cover-sub { font-size: clamp(1rem, 3vw, 1.2rem); font-weight: 700; color: var(--teal); margin: .2rem 0 1rem; }
+.cover-note { font-style: italic; color: var(--ink-soft); max-width: 44ch; margin: 0 auto 1.4rem; }
+
+/* ---------- Contents ---------- */
+.contents {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 2.4rem clamp(.8rem, 3vw, 1.5rem) 1rem;
+}
+.contents h2 {
+  text-align: center;
+  font-size: clamp(1.6rem, 5vw, 2.2rem);
+  margin: 0 0 .2rem;
+}
+.contents .read-count {
+  text-align: center;
+  font-size: .9rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+  margin: 0 0 1.6rem;
+}
+
+.contents-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.chapter-card {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: var(--paper);
+  border: 3px solid var(--line);
+  border-radius: 22px;
+  padding: 1.1rem 1.1rem 2.2rem;
+  box-shadow: 0 8px 0 -3px #e9d7b8;
+  overflow: hidden;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.chapter-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 8px;
+  background: var(--c, #f2a541);
+}
+.chapter-card:hover {
+  transform: translateY(-4px) rotate(-.5deg);
+  box-shadow: 0 14px 0 -4px #e9d7b8;
+}
+
+.chapter-num {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  font-family: 'Baloo 2', cursive;
+  font-weight: 800;
+  font-size: .82rem;
+  color: #fff;
+  background: var(--c, #f2a541);
+  border-radius: 50%;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, .12);
+}
+
+.chapter-icon { font-size: 1.85rem; display: block; margin-bottom: .15rem; }
+.chapter-card h3 { margin: .1rem 2.4rem .3rem 0; font-size: 1.14rem; }
+.chapter-card p { margin: 0; font-size: .85rem; color: var(--ink-soft); line-height: 1.5; }
+
+.read-badge {
+  display: none;
+  position: absolute;
+  bottom: .7rem;
+  right: .85rem;
+  font-size: .66rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: #fff;
+  background: var(--teal);
+  padding: .18rem .55rem;
+  border-radius: 99px;
+}
+.chapter-card.is-read .read-badge { display: inline-block; }
+
+/* ---------- Footer ---------- */
+.site-foot {
+  text-align: center;
+  font-size: .85rem;
+  color: #8d7768;
+  padding: 1.5rem 1rem;
+}
+
+@media (max-width: 520px) {
+  .progress .bar { width: 78px; }
+  .page-nav { justify-content: center; }
+  .btn { flex: 1 1 auto; text-align: center; }
+}

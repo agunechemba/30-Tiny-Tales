@@ -1,0 +1,53 @@
+<!-- story-20.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 20 · The Doll Inside the Doll — The Coding Storybook</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-chapter="20">
+
+<header class="topbar">
+  <a class="home-link" href="index.html">🏠 Contents</a>
+  <div class="progress">
+    <span>Chapter 20 of 21</span>
+    <span class="bar"><i></i></span>
+  </div>
+</header>
+
+<main class="page">
+  <span class="chapter-tag">Chapter 20</span>
+  <h1 class="story-title">The Doll Inside the Doll</h1>
+  <p class="story-sub">Recursion</p>
+
+  <div class="illustration" aria-hidden="true">🪆</div>
+
+  <div class="story-text">
+    <p>Ana opened the wooden doll and found a smaller doll inside. She opened that one and found a smaller doll still. And inside that one — another.</p>
+    <p>“How many are there?” she asked. Grandma said, “Open one, and ask the doll inside. It will ask the doll inside <em>it</em>, and so on.” Ana laughed. “But that never stops!”</p>
+    <p>“It stops,” said Grandma, “because the smallest doll doesn’t open. That’s the <strong>base case</strong> — the one that simply answers ‘one’ and goes no deeper.”</p>
+    <p>So Ana counted: the big doll said “one plus what’s inside me”, the next said the same, all the way down until the tiny solid doll said “one”. Then the answers came rushing back up. A function that calls itself is called <strong>recursion</strong> — and it always needs a base case to stop it.</p>
+  </div>
+
+  <aside class="callout big-idea">
+    <h2>Big Idea</h2>
+    <p><strong>Recursion</strong> is when a function calls itself on a smaller version of the problem. Every recursion needs a <strong>base case</strong> so it knows when to stop.</p>
+  </aside>
+
+  <aside class="callout try-it">
+    <h2>Try It!</h2>
+    <p>Say a countdown out loud: “3 — then countdown from 2 — then countdown from 1 — then countdown from 0 — stop!” Which part was the base case?</p>
+  </aside>
+
+  <nav class="page-nav">
+    <a class="btn prev" href="story-19.html">← The Lost Marble</a>
+    <a class="btn next" href="story-21.html">Next: The Cookie Cutter Family →</a>
+  </nav>
+</main>
+
+<footer class="site-foot">The Coding Storybook · Chapter 20 of 21</footer>
+<script src="book.js"></script>
+</body>
+</html>
