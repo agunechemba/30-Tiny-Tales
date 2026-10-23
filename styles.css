@@ -10,6 +10,7 @@
   --sky: #5b9bd5;
   --plum: #9b5de5;
   --line: #f0dfc0;
+  --ink-faint: #8d7768;
 }
 
 * { box-sizing: border-box; }
@@ -328,14 +329,96 @@ h1, h2, h3 { font-family: 'Baloo 2', 'Trebuchet MS', cursive, sans-serif; line-h
 
 /* ---------- Footer ---------- */
 .site-foot {
+  position: relative;
+  max-width: 780px;
+  margin: clamp(1.6rem, 4vw, 2.6rem) auto 1.5rem;
+  padding: clamp(1rem, 3vw, 1.3rem) clamp(1rem, 4vw, 1.8rem);
   text-align: center;
-  font-size: .85rem;
-  color: #8d7768;
-  padding: 1.5rem 1rem;
+  font-size: .88rem;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: .02em;
+  color: var(--ink-soft);
+  background: var(--paper);
+  border: 3px dashed var(--line);
+  border-radius: 22px;
+  box-shadow: 0 10px 0 -5px #e9d7b8;
 }
 
+.site-foot::before {
+  content: '✦ ✦ ✦';
+  display: block;
+  margin-bottom: .35rem;
+  font-size: .7rem;
+  letter-spacing: .5em;
+  text-indent: .5em;       /* keeps the dots optically centred */
+  color: var(--sun);
+}
+
+.site-foot a {
+  color: var(--teal);
+  font-weight: 800;
+  text-decoration: none;
+  padding-bottom: 1px;
+  border-bottom: 2px dashed currentColor;
+  transition: color .15s ease;
+}
+.site-foot a:hover,
+.site-foot a:focus-visible {
+  color: var(--coral);
+  outline: none;
+}
+
+/* ---------- Responsive ---------- */
 @media (max-width: 520px) {
   .progress .bar { width: 78px; }
   .page-nav { justify-content: center; }
   .btn { flex: 1 1 auto; text-align: center; }
+  .site-foot {
+    padding: 1rem 1.1rem;
+    font-size: .82rem;
+    border-radius: 18px;
+  }
+}
+
+/* ---------- Footer (credit) — quiet colophon ---------- */
+.site-foot-2 {
+  max-width: 780px;
+  margin: clamp(1.4rem, 3vw, 2rem) auto 1.2rem;
+  padding: 1.1rem 1rem 0;
+  text-align: center;
+  font-size: .76rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: .03em;
+  color: #a08b7a;
+  border-top: 2px dashed #f0e4cd;
+}
+
+.site-foot-2::before {
+  content: '✦ ✦ ✦';
+  display: block;
+  margin-bottom: .3rem;
+  font-size: .58rem;
+  letter-spacing: .45em;
+  text-indent: .45em;
+  color: #dcc9a8;
+}
+
+.site-foot-2 a {
+  color: #8d7768;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px dotted currentColor;
+  transition: color .15s ease;
+}
+
+.site-foot-2 a:hover,
+.site-foot-2 a:focus-visible {
+  color: var(--teal);
+  outline: none;
+}
+
+@media (max-width: 520px) {
+  .site-foot-2 { font-size: .72rem; padding-top: .9rem; }
 }
