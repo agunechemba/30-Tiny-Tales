@@ -85,7 +85,7 @@ The writing follows three rules:
 
 ## Start reading
 
-Twenty-one chapters. One small dragon. A very polite doorbell. A robot who butters cold toast.
+Twenty-one chapters. One small tortoise. A very polite doorbell. A robot who salts an unpeeled plantain.
 
 <p align="center">
   <a href="https://agunechemba.name.ng/TCS/index.html">
