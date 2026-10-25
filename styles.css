@@ -1,18 +1,116 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
+/* ==========================================================================
+   1. THEME TOKENS  — light (default)
+   ========================================================================== */
 :root {
-  --paper: #fff9ec;
-  --ink: #3d2f2a;
-  --ink-soft: #6f5b52;
-  --coral: #ef6f6c;
-  --teal: #2a9d8f;
-  --sun: #f2a541;
-  --sky: #5b9bd5;
-  --plum: #9b5de5;
-  --line: #f0dfc0;
-  --ink-faint: #8d7768;
+  color-scheme: light dark;
+
+  /* Base surfaces */
+  --paper:                #fff9ec;
+  --paper-raised:         #ffffff;
+  --paper-tint:           #f8eeda;
+  --topbar-bg:            rgba(255, 249, 236, .94);
+  --dot-color:            rgba(150, 110, 70, .14);
+
+  /* Ink */
+  --ink:                  #3d2f2a;
+  --ink-soft:             #6f5b52;
+  --ink-faint:            #8d7768;
+  --ink-muted:            #a08b7a;
+
+  /* Lines & shadows */
+  --line:                 #f0dfc0;
+  --line-dashed:          #f2e4cb;
+  --line-dashed-soft:     #f0e4cd;
+  --shadow-strong:        #e9d7b8;
+  --shadow-soft:          #ecd9b9;
+  --shadow-bar:           #ecdcbe;
+  --shadow-e8:            #e8d6b6;
+  --shadow-page:          rgba(120, 85, 45, .16);
+  --shadow-node:          rgba(0, 0, 0, .12);
+  --deco-faint:           #dcc9a8;
+
+  /* Accents */
+  --coral:                #ef6f6c;
+  --teal:                 #2a9d8f;
+  --sun:                  #f2a541;
+  --sky:                  #5b9bd5;
+  --plum:                 #9b5de5;
+
+  /* Callouts */
+  --big-idea-border:      #ffd9a8;
+  --big-idea-bg:          #fffaf0;
+  --try-it-border:        #bfe3dd;
+  --try-it-bg:            #f2fbf9;
+
+  /* Illustration */
+  --illustration-grad-a:  #ffffff;
+  --illustration-grad-b:  #ffeccc;
+
+  /* Buttons */
+  --btn-bg:               #ffffff;
+  --btn-next-bg:          #fff5e0;
+  --btn-next-border:      #f4d9a8;
 }
 
+/* ==========================================================================
+   2. THEME TOKENS  — dark
+   ========================================================================== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Base surfaces */
+    --paper:                #241c17;
+    --paper-raised:         #2e241d;
+    --paper-tint:           #15100d;
+    --topbar-bg:            rgba(36, 28, 23, .94);
+    --dot-color:            rgba(220, 190, 150, .07);
+
+    /* Ink */
+    --ink:                  #f4e7d5;
+    --ink-soft:             #c5b3a0;
+    --ink-faint:            #a89480;
+    --ink-muted:            #8f7a68;
+
+    /* Lines & shadows */
+    --line:                 #4a3a2c;
+    --line-dashed:          #3a2d22;
+    --line-dashed-soft:     #35291f;
+    --shadow-strong:        #1a130f;
+    --shadow-soft:          #1d1611;
+    --shadow-bar:           #3a2d22;
+    --shadow-e8:            #221a14;
+    --shadow-page:          rgba(0, 0, 0, .55);
+    --shadow-node:          rgba(0, 0, 0, .40);
+    --deco-faint:           #3a2d22;
+
+    /* Accents — slightly brighter for dark backgrounds */
+    --coral:                #ff8a85;
+    --teal:                 #4ecdc4;
+    --sun:                  #ffb85c;
+    --sky:                  #7bb3e8;
+    --plum:                 #b98af0;
+
+    /* Callouts */
+    --big-idea-border:      #6b4d2a;
+    --big-idea-bg:          #2e2419;
+    --try-it-border:        #2e5754;
+    --try-it-bg:            #1a2928;
+
+    /* Illustration */
+    --illustration-grad-a:  #3a2d22;
+    --illustration-grad-b:  #4a3826;
+
+    /* Buttons */
+    --btn-bg:               #2e241d;
+    --btn-next-bg:          #35281d;
+    --btn-next-border:      #5a4030;
+  }
+}
+
+/* ==========================================================================
+   3. RESET & BASE
+   ========================================================================== */
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
@@ -23,15 +121,17 @@ body {
   font-family: 'Nunito', system-ui, -apple-system, 'Segoe UI', sans-serif;
   font-size: 1.05rem;
   line-height: 1.75;
-  background-color: #f8eeda;
-  background-image: radial-gradient(rgba(150, 110, 70, .14) 1.2px, transparent 1.2px);
+  background-color: var(--paper-tint);
+  background-image: radial-gradient(var(--dot-color) 1.2px, transparent 1.2px);
   background-size: 22px 22px;
   padding-bottom: 2rem;
 }
 
 h1, h2, h3 { font-family: 'Baloo 2', 'Trebuchet MS', cursive, sans-serif; line-height: 1.15; }
 
-/* ---------- Top bar ---------- */
+/* ==========================================================================
+   4. TOP BAR
+   ========================================================================== */
 .topbar {
   position: sticky;
   top: 0;
@@ -41,7 +141,7 @@ h1, h2, h3 { font-family: 'Baloo 2', 'Trebuchet MS', cursive, sans-serif; line-h
   justify-content: space-between;
   gap: 1rem;
   padding: .6rem clamp(.8rem, 3vw, 1.6rem);
-  background: rgba(255, 249, 236, .94);
+  background: var(--topbar-bg);
   backdrop-filter: blur(6px);
   border-bottom: 3px dashed var(--line);
 }
@@ -50,11 +150,11 @@ h1, h2, h3 { font-family: 'Baloo 2', 'Trebuchet MS', cursive, sans-serif; line-h
   text-decoration: none;
   color: var(--ink);
   font-weight: 700;
-  background: #fff;
+  background: var(--paper-raised);
   border: 2px solid var(--line);
   padding: .35rem .9rem;
   border-radius: 999px;
-  box-shadow: 0 3px 0 #e8d6b6;
+  box-shadow: 0 3px 0 var(--shadow-e8);
   transition: transform .12s;
 }
 .home-link:hover { transform: translateY(-1px); }
@@ -75,7 +175,7 @@ h1, h2, h3 { font-family: 'Baloo 2', 'Trebuchet MS', cursive, sans-serif; line-h
   width: 120px;
   height: 8px;
   border-radius: 99px;
-  background: #ecdcbe;
+  background: var(--shadow-bar);
   overflow: hidden;
 }
 .bar i {
@@ -87,7 +187,9 @@ h1, h2, h3 { font-family: 'Baloo 2', 'Trebuchet MS', cursive, sans-serif; line-h
   transition: width .9s ease;
 }
 
-/* ---------- Story page ---------- */
+/* ==========================================================================
+   5. STORY PAGE
+   ========================================================================== */
 .page {
   position: relative;
   max-width: 780px;
@@ -96,14 +198,14 @@ h1, h2, h3 { font-family: 'Baloo 2', 'Trebuchet MS', cursive, sans-serif; line-h
   background: var(--paper);
   border: 3px solid var(--line);
   border-radius: 28px;
-  box-shadow: 0 22px 0 -10px #e9d7b8, 0 30px 60px rgba(120, 85, 45, .16);
+  box-shadow: 0 22px 0 -10px var(--shadow-strong), 0 30px 60px var(--shadow-page);
   animation: pageIn .55s cubic-bezier(.2, .8, .3, 1) both;
 }
 .page::before {
   content: '';
   position: absolute;
   inset: 12px;
-  border: 2px dashed #f2e4cb;
+  border: 2px dashed var(--line-dashed);
   border-radius: 20px;
   pointer-events: none;
 }
@@ -120,17 +222,17 @@ h1, h2, h3 { font-family: 'Baloo 2', 'Trebuchet MS', cursive, sans-serif; line-h
   font-size: .8rem;
   letter-spacing: .16em;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--paper-raised);
   background: var(--teal);
   padding: .28rem .95rem;
   border-radius: 999px;
-  box-shadow: 0 4px 0 rgba(0, 0, 0, .12);
+  box-shadow: 0 4px 0 var(--shadow-node);
 }
 
 .story-title {
   font-size: clamp(2rem, 6vw, 3rem);
   margin: .7rem 0 .1rem;
-  color: #2f2622;
+  color: var(--ink);
 }
 
 .story-sub {
@@ -147,10 +249,10 @@ h1, h2, h3 { font-family: 'Baloo 2', 'Trebuchet MS', cursive, sans-serif; line-h
   height: clamp(96px, 22vw, 132px);
   margin: .4rem auto 1.4rem;
   font-size: clamp(2.6rem, 8vw, 3.6rem);
-  background: radial-gradient(circle at 30% 25%, #ffffff, #ffeccc 72%);
+  background: radial-gradient(circle at 30% 25%, var(--illustration-grad-a), var(--illustration-grad-b) 72%);
   border: 3px solid var(--line);
   border-radius: 50%;
-  box-shadow: 0 10px 0 -4px #ecd9b9;
+  box-shadow: 0 10px 0 -4px var(--shadow-soft);
 }
 
 .story-text p { margin: 0 0 1.05rem; }
@@ -164,13 +266,15 @@ h1, h2, h3 { font-family: 'Baloo 2', 'Trebuchet MS', cursive, sans-serif; line-h
   color: var(--coral);
 }
 
-/* ---------- Callouts ---------- */
+/* ==========================================================================
+   6. CALLOUTS
+   ========================================================================== */
 .callout {
   margin: 1.5rem 0;
   padding: 1rem 1.2rem;
   border-radius: 18px;
   border: 3px dashed;
-  background: #fff;
+  background: var(--paper-raised);
 }
 .callout h2 {
   margin: 0 0 .45rem;
@@ -181,13 +285,15 @@ h1, h2, h3 { font-family: 'Baloo 2', 'Trebuchet MS', cursive, sans-serif; line-h
 .callout p { margin: 0 0 .5rem; }
 .callout p:last-child { margin-bottom: 0; }
 
-.big-idea { border-color: #ffd9a8; background: #fffaf0; }
+.big-idea { border-color: var(--big-idea-border); background: var(--big-idea-bg); }
 .big-idea h2 { color: var(--sun); }
 
-.try-it { border-color: #bfe3dd; background: #f2fbf9; }
+.try-it { border-color: var(--try-it-border); background: var(--try-it-bg); }
 .try-it h2 { color: var(--teal); }
 
-/* ---------- Page navigation ---------- */
+/* ==========================================================================
+   7. PAGE NAVIGATION
+   ========================================================================== */
 .page-nav {
   display: flex;
   gap: .8rem;
@@ -202,25 +308,27 @@ h1, h2, h3 { font-family: 'Baloo 2', 'Trebuchet MS', cursive, sans-serif; line-h
   font-size: 1rem;
   text-decoration: none;
   color: var(--ink);
-  background: #fff;
+  background: var(--btn-bg);
   border: 3px solid var(--line);
   padding: .55rem 1.15rem;
   border-radius: 999px;
-  box-shadow: 0 5px 0 #e9d7b8;
+  box-shadow: 0 5px 0 var(--shadow-strong);
   transition: transform .12s, box-shadow .12s;
 }
-.btn:hover { transform: translateY(-2px); box-shadow: 0 7px 0 #e9d7b8; }
-.btn:active { transform: translateY(3px); box-shadow: 0 2px 0 #e9d7b8; }
-.btn.next { background: #fff5e0; border-color: #f4d9a8; }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 7px 0 var(--shadow-strong); }
+.btn:active { transform: translateY(3px); box-shadow: 0 2px 0 var(--shadow-strong); }
+.btn.next { background: var(--btn-next-bg); border-color: var(--btn-next-border); }
 
 .key-hint {
   text-align: center;
   font-size: .8rem;
-  color: #a08b7a;
+  color: var(--ink-muted);
   margin: 1.1rem 0 0;
 }
 
-/* ---------- Cover ---------- */
+/* ==========================================================================
+   8. COVER
+   ========================================================================== */
 .cover {
   position: relative;
   max-width: 780px;
@@ -230,7 +338,7 @@ h1, h2, h3 { font-family: 'Baloo 2', 'Trebuchet MS', cursive, sans-serif; line-h
   background: var(--paper);
   border: 3px solid var(--line);
   border-radius: 32px;
-  box-shadow: 0 22px 0 -10px #e9d7b8, 0 30px 60px rgba(120, 85, 45, .16);
+  box-shadow: 0 22px 0 -10px var(--shadow-strong), 0 30px 60px var(--shadow-page);
   overflow: hidden;
   animation: pageIn .6s cubic-bezier(.2, .8, .3, 1) both;
 }
@@ -240,7 +348,9 @@ h1, h2, h3 { font-family: 'Baloo 2', 'Trebuchet MS', cursive, sans-serif; line-h
 .cover-sub { font-size: clamp(1rem, 3vw, 1.2rem); font-weight: 700; color: var(--teal); margin: .2rem 0 1rem; }
 .cover-note { font-style: italic; color: var(--ink-soft); max-width: 44ch; margin: 0 auto 1.4rem; }
 
-/* ---------- Contents ---------- */
+/* ==========================================================================
+   9. CONTENTS
+   ========================================================================== */
 .contents {
   max-width: 1060px;
   margin: 0 auto;
@@ -274,7 +384,7 @@ h1, h2, h3 { font-family: 'Baloo 2', 'Trebuchet MS', cursive, sans-serif; line-h
   border: 3px solid var(--line);
   border-radius: 22px;
   padding: 1.1rem 1.1rem 2.2rem;
-  box-shadow: 0 8px 0 -3px #e9d7b8;
+  box-shadow: 0 8px 0 -3px var(--shadow-strong);
   overflow: hidden;
   transition: transform .15s ease, box-shadow .15s ease;
 }
@@ -283,11 +393,11 @@ h1, h2, h3 { font-family: 'Baloo 2', 'Trebuchet MS', cursive, sans-serif; line-h
   position: absolute;
   inset: 0 0 auto 0;
   height: 8px;
-  background: var(--c, #f2a541);
+  background: var(--c, var(--sun));
 }
 .chapter-card:hover {
   transform: translateY(-4px) rotate(-.5deg);
-  box-shadow: 0 14px 0 -4px #e9d7b8;
+  box-shadow: 0 14px 0 -4px var(--shadow-strong);
 }
 
 .chapter-num {
@@ -301,10 +411,10 @@ h1, h2, h3 { font-family: 'Baloo 2', 'Trebuchet MS', cursive, sans-serif; line-h
   font-family: 'Baloo 2', cursive;
   font-weight: 800;
   font-size: .82rem;
-  color: #fff;
-  background: var(--c, #f2a541);
+  color: var(--paper-raised);
+  background: var(--c, var(--sun));
   border-radius: 50%;
-  box-shadow: 0 3px 0 rgba(0, 0, 0, .12);
+  box-shadow: 0 3px 0 var(--shadow-node);
 }
 
 .chapter-icon { font-size: 1.85rem; display: block; margin-bottom: .15rem; }
@@ -320,14 +430,16 @@ h1, h2, h3 { font-family: 'Baloo 2', 'Trebuchet MS', cursive, sans-serif; line-h
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: .1em;
-  color: #fff;
+  color: var(--paper-raised);
   background: var(--teal);
   padding: .18rem .55rem;
   border-radius: 99px;
 }
 .chapter-card.is-read .read-badge { display: inline-block; }
 
-/* ---------- Footer ---------- */
+/* ==========================================================================
+   10. FOOTER
+   ========================================================================== */
 .site-foot {
   position: relative;
   max-width: 780px;
@@ -342,7 +454,7 @@ h1, h2, h3 { font-family: 'Baloo 2', 'Trebuchet MS', cursive, sans-serif; line-h
   background: var(--paper);
   border: 3px dashed var(--line);
   border-radius: 22px;
-  box-shadow: 0 10px 0 -5px #e9d7b8;
+  box-shadow: 0 10px 0 -5px var(--shadow-strong);
 }
 
 .site-foot::before {
@@ -351,7 +463,7 @@ h1, h2, h3 { font-family: 'Baloo 2', 'Trebuchet MS', cursive, sans-serif; line-h
   margin-bottom: .35rem;
   font-size: .7rem;
   letter-spacing: .5em;
-  text-indent: .5em;       /* keeps the dots optically centred */
+  text-indent: .5em;
   color: var(--sun);
 }
 
@@ -369,19 +481,9 @@ h1, h2, h3 { font-family: 'Baloo 2', 'Trebuchet MS', cursive, sans-serif; line-h
   outline: none;
 }
 
-/* ---------- Responsive ---------- */
-@media (max-width: 520px) {
-  .progress .bar { width: 78px; }
-  .page-nav { justify-content: center; }
-  .btn { flex: 1 1 auto; text-align: center; }
-  .site-foot {
-    padding: 1rem 1.1rem;
-    font-size: .82rem;
-    border-radius: 18px;
-  }
-}
-
-/* ---------- Footer (credit) — quiet colophon ---------- */
+/* ==========================================================================
+   11. COLOPHON
+   ========================================================================== */
 .site-foot-2 {
   max-width: 780px;
   margin: clamp(1.4rem, 3vw, 2rem) auto 1.2rem;
@@ -391,8 +493,8 @@ h1, h2, h3 { font-family: 'Baloo 2', 'Trebuchet MS', cursive, sans-serif; line-h
   font-weight: 600;
   line-height: 1.5;
   letter-spacing: .03em;
-  color: #a08b7a;
-  border-top: 2px dashed #f0e4cd;
+  color: var(--ink-muted);
+  border-top: 2px dashed var(--line-dashed-soft);
 }
 
 .site-foot-2::before {
@@ -402,11 +504,11 @@ h1, h2, h3 { font-family: 'Baloo 2', 'Trebuchet MS', cursive, sans-serif; line-h
   font-size: .58rem;
   letter-spacing: .45em;
   text-indent: .45em;
-  color: #dcc9a8;
+  color: var(--deco-faint);
 }
 
 .site-foot-2 a {
-  color: #8d7768;
+  color: var(--ink-faint);
   font-weight: 700;
   text-decoration: none;
   border-bottom: 1px dotted currentColor;
@@ -419,6 +521,42 @@ h1, h2, h3 { font-family: 'Baloo 2', 'Trebuchet MS', cursive, sans-serif; line-h
   outline: none;
 }
 
+/* ==========================================================================
+   12. RESPONSIVE
+   ========================================================================== */
 @media (max-width: 520px) {
+  .progress .bar { width: 78px; }
+  .page-nav { justify-content: center; }
+  .btn { flex: 1 1 auto; text-align: center; }
+  .site-foot {
+    padding: 1rem 1.1rem;
+    font-size: .82rem;
+    border-radius: 18px;
+  }
   .site-foot-2 { font-size: .72rem; padding-top: .9rem; }
+}
+
+/* ==========================================================================
+   13. ACCESSIBILITY — reduced motion
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .page,
+  .cover { animation: none; }
+
+  .bar i { transition: none; }
+
+  .home-link:hover,
+  .chapter-card:hover,
+  .btn:hover,
+  .btn:active { transform: none; }
 }

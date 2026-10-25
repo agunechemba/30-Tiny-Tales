@@ -1,0 +1,55 @@
+<!-- story-25.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 25 · The Rickshaw Tune-Up — The Coding Storybook</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/svg+xml" href="https://pph.name.ng/pphlogo.svg">
+</head>
+<body data-chapter="25">
+
+<header class="topbar">
+  <a class="home-link" href="index.html">🏠 Contents</a>
+  <div class="progress">
+    <span>Chapter 25 of 30</span>
+    <span class="bar"><i></i></span>
+  </div>
+</header>
+
+<main class="page">
+  <span class="chapter-tag">Chapter 25</span>
+  <h1 class="story-title">The Rickshaw Tune-Up</h1>
+  <p class="story-sub">Optimization</p>
+
+  <div class="illustration" aria-hidden="true">🛺</div>
+
+  <div class="story-text">
+    <p>A rickshaw driver finished his work. The rickshaw worked — but it was slow, heavy, and gulped petrol. "It works!" he said. "Why tune it?" His friend, a mechanic, laughed. "Because a slow rickshaw that works is worse than a fast one that works just as well."</p>
+    <p>Optimization means making a program <strong>faster</strong>, <strong>smaller</strong>, and <strong>less memory-hungry</strong> — without breaking it. The first step is choosing the right <strong>data structure</strong>: a dynamic array that grows as needed wastes less memory than a giant static array mostly filled with empty space. The second step is choosing the right <strong>algorithm</strong>: quicksort sorts 30,000 names much faster than bubble sort; binary search finds a name much faster than sequential search (but only if the list is sorted first).</p>
+    <p>The third step is <strong>fine-tuning the source code</strong>. Put the condition most likely to be false first in an AND expression — if the first is false, the computer skips checking the second. Put the condition most likely to be true first in an IF-ELSEIF or SELECT CASE statement — the computer finds a match sooner. Don't use a FOR-NEXT loop when a WHILE loop can stop early. Remove instructions from loops that don't need to repeat. Use the smallest data type that fits your values. Use built-in commands whenever possible.</p>
+    <p>Finally, you can <strong>use a faster language</strong> (C++ runs faster than BASIC) or <strong>optimize your compiler</strong> (turn on speed settings, though some turn off error-checking). But remember: a slow, bloated program that works is better than a small, fast one that doesn't. Optimize after it works, not before.</p>
+  </div>
+
+  <aside class="callout big-idea">
+    <h2>Big Idea</h2>
+    <p>Optimization makes a working program faster, smaller, and leaner. Choose the right data structure and algorithm. Fine-tune your source code. Use built-in commands. But never optimize a program that doesn't work yet.</p>
+  </aside>
+
+  <aside class="callout try-it">
+    <h2>Try It!</h2>
+    <p>Imagine searching for a word in a dictionary. Do you start at page 1 and read every page (sequential search), or do you open to the middle and flip left or right (binary search)? Which is faster? Now imagine the dictionary is unsorted — which search can you still use?</p>
+  </aside>
+
+  <nav class="page-nav">
+    <a class="btn prev" href="story-24.html">← The Tester's Tea Party</a>
+    <a class="btn next" href="story-26.html">Next: The Shop Counter and the Bell →</a>
+  </nav>
+</main>
+
+<footer class="site-foot">The Coding Storybook · Chapter 25 of 30</footer>
+<footer class="site-foot-2">Credit <a href="https://agunechemba.name.ng">Agunechemba Ekene</a></footer>
+<script src="book.js"></script>
+</body>
+</html>

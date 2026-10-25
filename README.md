@@ -1,6 +1,6 @@
 # About The Coding Storybook
 
-**Twenty-one tiny tales that teach kids how computers think — one bedtime story at a time.**
+**Thirty tiny tales that teach kids how computers think — one bedtime story at a time.**
 
 [![Open The Coding Storybook](https://img.shields.io/badge/📖_Read_The_Coding_Storybook-Open_Now-ef6f6c?style=for-the-badge&labelColor=3d2f2a)](https://agunechemba.name.ng/TCS/index.html)
 
@@ -20,7 +20,7 @@ Most programming tutorials start with a screen, a blinking cursor, and the words
 
 That works for some kids. But many — especially younger ones — need something warmer first: a story, a character, a little problem worth solving. They need to *feel* the idea before they type it.
 
-**The Coding Storybook** was built to fill that gap. It takes the 21 core ideas of programming — from decomposition to object-oriented design — and turns each one into a short, illustrated tale a parent or teacher can read aloud in five minutes.
+**The Coding Storybook** was built to fill that gap. It takes the 30 core ideas of programming — from decomposition to object-oriented design, from compilers to Java applets — and turns each one into a short, illustrated tale a parent or teacher can read aloud in five minutes.
 
 No laptop required. No prior knowledge. Just a story.
 
@@ -34,17 +34,20 @@ Each chapter is a self-contained story with three parts:
 - 💡 **The Big Idea** — a plain-language explanation of the concept the story just showed.
 - ✏️ **Try It!** — a tiny offline activity to make the idea stick.
 
-The 21 chapters walk through:
+The 30 chapters walk through:
 
 | | | |
 |---|---|---|
-| 1. Computational thinking | 2. Programs & sequence | 3. Code, statements, syntax |
-| 4. Input / output | 5. Bugs & debugging | 6. Variables |
-| 7. Data types | 8. Operators | 9. Conditionals |
-| 10. Loops | 11. Testing | 12. Functions |
-| 13. Events & handlers | 14. Lists & arrays | 15. Strings |
-| 16. Scope & lifetime | 17. Modules & APIs | 18. Data structures |
-| 19. Algorithms | 20. Recursion | 21. Object-oriented basics |
+| 1. Computational thinking | 2. Programs & sequence | 3. Programming languages |
+| 4. Code, statements, syntax | 5. Program design | 6. Tools of a programmer |
+| 7. Input / output | 8. Variables | 9. Constants |
+| 10. Comments | 11. Data types | 12. Operators |
+| 13. Strings | 14. Conditionals | 15. Loops |
+| 16. Subprograms & functions | 17. Libraries & APIs | 18. Arrays |
+| 19. Scope & lifetime | 20. Object-oriented basics | 21. Searching & sorting |
+| 22. Recursion | 23. Bugs & debugging | 24. Testing |
+| 25. Optimization | 26. User interface & events | 27. Data structures |
+| 28. HTML | 29. JavaScript | 30. Java applets |
 
 ---
 
@@ -83,9 +86,20 @@ The writing follows three rules:
 
 ---
 
+## Coverage
+
+The stories follow the structure of a classic beginner's programming course, adapted for young readers. They cover **all the vital topics** a first-time programmer needs:
+
+- **Foundations** (Stories 1–7): thinking like a computer, writing programs, the languages programmers use, and the tools that turn code into working software.
+- **Building blocks** (Stories 8–17): variables, constants, comments, data types, operators, strings, conditionals, loops, subprograms, and libraries.
+- **Advanced topics** (Stories 18–27): arrays, scope, object-oriented programming, searching, sorting, recursion, debugging, testing, optimization, user interfaces, and data structures.
+- **Internet programming** (Stories 28–30): HTML, JavaScript, and Java applets.
+
+---
+
 ## Start reading
 
-Twenty-one chapters. One small tortoise. A very polite doorbell. A robot who salts an unpeeled plantain.
+Thirty chapters. One small tortoise. A very polite doorbell. A robot who salts an unpeeled plantain. A calabash that holds a calabash that holds a calabash.
 
 <p align="center">
   <a href="https://agunechemba.name.ng/TCS/index.html">
