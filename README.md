@@ -60,40 +60,15 @@ The 30 chapters walk through:
 
 ---
 
-## How it works
-
-The site is deliberately simple:
-
-- **Pure HTML, CSS and JavaScript.** No frameworks, no build tools, no tracking.
-- **One page per story**, all linked from a single table of contents.
-- **Progress is remembered** in your browser's local storage, so kids can see how far they've read.
-- **Arrow keys turn pages** — like a real book.
-- **Works offline** once loaded, and looks good on phones and tablets.
-
-You can open it in any browser and start reading immediately.
-
----
-
 ## Design philosophy
 
-The look is intentionally **analog**: cream paper, dashed borders, soft shadows, a big coral drop cap on every story. It should feel like a book a child might pull off a shelf, not like a dashboard.
+The look is intentionally **analog**: dashed borders, soft shadows, a big coral drop cap on every story.
 
 The writing follows three rules:
 
 1. **One idea per story.** Never two.
 2. **No jargon before the story earns it.** The term arrives *after* the child already understands the concept.
 3. **Every story ends with something to do.** Reading is the beginning, not the end.
-
----
-
-## Coverage
-
-The stories follow the structure of a classic beginner's programming course, adapted for young readers. They cover **all the vital topics** a first-time programmer needs:
-
-- **Foundations** (Stories 1–7): thinking like a computer, writing programs, the languages programmers use, and the tools that turn code into working software.
-- **Building blocks** (Stories 8–17): variables, constants, comments, data types, operators, strings, conditionals, loops, subprograms, and libraries.
-- **Advanced topics** (Stories 18–27): arrays, scope, object-oriented programming, searching, sorting, recursion, debugging, testing, optimization, user interfaces, and data structures.
-- **Internet programming** (Stories 28–30): HTML, JavaScript, and Java applets.
 
 ---
 
