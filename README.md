@@ -1,89 +1,35 @@
-# About The Coding Storybook
+---
+title: About
+date: 2027-01-28
+description: About 30 Tiny Tales — a storybook introduction to how computers think.
+---
 
-**Thirty tiny tales that teach kids how computers think — one bedtime story at a time.**
+# About 30 Tiny Tales
 
-[![Open The Coding Storybook](https://img.shields.io/badge/📖_Read_The_Coding_Storybook-Open_Now-ef6f6c?style=for-the-badge&labelColor=3d2f2a)](https://agunechemba.name.ng/TCS/index.html)
+**30 Tiny Tales** is a storybook introduction to programming and computational thinking. It began with a simple question from a curious kid: *“But how does the computer know?”* These thirty short stories are the answer she was given.
 
-<p align="center">
-  <a href="https://agunechemba.name.ng/TCS/index.html">
-    <img src="https://img.shields.io/badge/📖%20Start%20Reading%20The%20Coding%20Storybook-ef6f6c?style=for-the-badge&labelColor=2a9d8f" alt="Start Reading The Coding Storybook" />
-  </a>
-</p>
+Each tale takes one big idea from computing and turns it into something small, warm, and memorable — a puzzle, a robot, a calabash, a signboard, a train of puff-puffs. The stories move from the foundations of problem-solving and programs through variables, loops, functions, data structures, debugging, testing, user interfaces, and finally to HTML, JavaScript, and Java applets.
 
-> **[👉 Open The Coding Storybook →](https://agunechemba.name.ng/TCS/index.html)**
+## Who it is for
+
+This book is for young readers, curious beginners, and anyone who has ever wondered what is really happening inside a computer. No previous programming experience is needed. The stories are meant to be read aloud, discussed, and tried out.
+
+## What is inside
+
+- **30 short chapters**, each built around a single programming concept
+- **Big Idea** boxes that summarise the lesson
+- **Try It!** prompts that turn reading into play
+- A gentle progression from computational thinking to web pages and applets
+- A warm storybook style designed for page-by-page reading
+
+## How to read it
+
+Read one tale at a time. Pause at the **Big Idea**, then try the **Try It!** activity before moving on. The book can be read from beginning to end, or explored chapter by chapter from the contents page.
+
+## Credit
+
+Written by [Agunechemba Ekene](https://agunechemba.name.ng).
 
 ---
 
-## Why this project exists
-
-Most programming tutorials start with a screen, a blinking cursor, and the words *"Hello, World."*
-
-That works for some kids. But many — especially younger ones — need something warmer first: a story, a character, a little problem worth solving. They need to *feel* the idea before they type it.
-
-**The Coding Storybook** was built to fill that gap. It takes the 30 core ideas of programming — from decomposition to object-oriented design, from compilers to Java applets — and turns each one into a short, illustrated tale a parent or teacher can read aloud in five minutes.
-
-No laptop required. No prior knowledge. Just a story.
-
----
-
-## What's inside
-
-Each chapter is a self-contained story with three parts:
-
-- 📖 **The Story** — a friendly character runs into a small, relatable problem.
-- 💡 **The Big Idea** — a plain-language explanation of the concept the story just showed.
-- ✏️ **Try It!** — a tiny offline activity to make the idea stick.
-
-The 30 chapters walk through:
-
-| | | |
-|---|---|---|
-| 1. Computational thinking | 2. Programs & sequence | 3. Programming languages |
-| 4. Code, statements, syntax | 5. Program design | 6. Tools of a programmer |
-| 7. Input / output | 8. Variables | 9. Constants |
-| 10. Comments | 11. Data types | 12. Operators |
-| 13. Strings | 14. Conditionals | 15. Loops |
-| 16. Subprograms & functions | 17. Libraries & APIs | 18. Arrays |
-| 19. Scope & lifetime | 20. Object-oriented basics | 21. Searching & sorting |
-| 22. Recursion | 23. Bugs & debugging | 24. Testing |
-| 25. Optimization | 26. User interface & events | 27. Data structures |
-| 28. HTML | 29. JavaScript | 30. Java applets |
-
----
-
-## Who it's for
-
-- **Parents** who want a gentle, screen-light way to introduce tech ideas.
-- **Teachers** looking for five-minute warm-ups or reading-circle material.
-- **Kids aged roughly 7–12** who are curious about "how the computer knows."
-- **Anyone** who learns better through narrative than through documentation.
-
----
-
-## Design philosophy
-
-The look is intentionally **analog**: dashed borders, soft shadows, a big coral drop cap on every story.
-
-The writing follows three rules:
-
-1. **One idea per story.** Never two.
-2. **No jargon before the story earns it.** The term arrives *after* the child already understands the concept.
-3. **Every story ends with something to do.** Reading is the beginning, not the end.
-
----
-
-## Start reading
-
-Thirty chapters. One small tortoise. A very polite doorbell. A robot who salts an unpeeled plantain. A calabash that holds a calabash that holds a calabash.
-
-<p align="center">
-  <a href="https://agunechemba.name.ng/TCS/index.html">
-    <img src="https://img.shields.io/badge/📖_Open_The_Coding_Storybook-Click_Here-2a9d8f?style=for-the-badge&labelColor=3d2f2a" alt="Open The Coding Storybook" />
-  </a>
-</p>
-
-### 👉 [https://agunechemba.name.ng/TCS/index.html](https://agunechemba.name.ng/TCS/index.html)
-
----
-
-*Made for curious kids — and the grown-ups who read to them.* ✦
+*Thirty small stories. Thirty large ideas. May the computer never again be a mystery — only a machine that does exactly what you tell it.*

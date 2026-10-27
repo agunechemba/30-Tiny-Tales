@@ -1,284 +1,1058 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Coding Storybook — 30 Tiny Tales</title>
+<title>30 Tiny Tales</title>
 <link rel="stylesheet" href="styles.css">
-<link rel="icon" type="image/svg+xml" href="https://pph.name.ng/pphlogo.svg">
+<script src="script.js" defer></script>
 </head>
 <body>
 
-<header class="topbar">
-  <a class="home-link" href="index.html">🏠 Contents</a>
-  <div class="progress">
-    <span>30 chapters</span>
-    <span class="bar"><i style="width:100%"></i></span>
-  </div>
-</header>
+<!-- ===================== READING PROGRESS ===================== -->
+<div class="reading-progress" aria-hidden="true">
+  <div class="reading-progress-fill"></div>
+</div>
 
-<section class="cover">
-  <span class="book-emoji">📖</span>
-  <div class="stars">✦ ✧ ✦</div>
-  <h1>The Coding Storybook</h1>
-  <p class="cover-sub">30 tiny tales about how computers think</p>
-  <p class="cover-note">Once upon a time, there was a kid who asked, “But how does the computer <em>know</em>?” These are the stories she was told.</p>
-  <a class="btn next" href="story-01.html">Start reading →</a>
+<!-- ===================== PAGE INDICATOR / HINT ===================== -->
+<div class="page-indicator">Page 1 of 32</div>
+<div class="page-hint">Use ← → or PageUp / PageDown</div>
+
+<!-- ============================ FRONT COVER ============================ -->
+<section class="book-page cover-page" id="cover">
+  <div class="cover-content">
+    <p class="cover-series">A Storybook of Programming</p>
+    <h1>30 Tiny Tales</h1>
+    <p class="cover-subtitle">About how computers think</p>
+    <p class="cover-author">For the kid who asked,<br>“But how does the computer <em>know</em>?”</p>
+    <p class="cover-note">
+      These are the stories she was told — thirty small tales, each one
+      unpacking a single idea from the world of programming.
+    </p>
+  </div>
+  <nav class="book-nav">
+    <button class="nav-button" data-nav="next">Begin Reading →</button>
+  </nav>
 </section>
 
-<section class="contents">
-  <h2>Contents</h2>
-  <p class="read-count">You have read <span data-read-count>0</span> of 30 chapters</p>
+<!-- ============================ TABLE OF CONTENTS ============================ -->
+<section class="book-page toc-page" id="contents">
+  <header class="chapter-header">
+    <p class="chapter-part">Contents</p>
+    <h2>30 Tiny Tales</h2>
+    <p class="chapter-tagline">Thirty stories, thirty ideas</p>
+  </header>
 
-  <div class="contents-grid">
-
-    <a class="chapter-card" href="story-01.html" data-chapter="01" style="--c:#ef6f6c">
-      <span class="chapter-num">01</span>
-      <span class="chapter-icon">🧩</span>
-      <h3>The Baobab Puzzle</h3>
-      <p>Computational thinking — decomposition, patterns, abstraction, algorithms</p>
-      <span class="read-badge">✓ Read</span>
-    </a>
-
-    <a class="chapter-card" href="story-02.html" data-chapter="02" style="--c:#f2a541">
-      <span class="chapter-num">02</span>
-      <span class="chapter-icon">🤖</span>
-      <h3>The Robot's Breakfast</h3>
-      <p>Programs, instructions and the order of things (sequence)</p>
-      <span class="read-badge">✓ Read</span>
-    </a>
-
-    <a class="chapter-card" href="story-03.html" data-chapter="03" style="--c:#2a9d8f">
-      <span class="chapter-num">03</span>
-      <span class="chapter-icon">🗣️</span>
-      <h3>The Tongues of Babel</h3>
-      <p>Programming languages — assembly, C, BASIC, SQL, JavaScript and why there are so many</p>
-      <span class="read-badge">✓ Read</span>
-    </a>
-
-    <a class="chapter-card" href="story-04.html" data-chapter="04" style="--c:#5b9bd5">
-      <span class="chapter-num">04</span>
-      <span class="chapter-icon">🐢</span>
-      <h3>Speaking Computer</h3>
-      <p>Code, statements and the grammar of syntax</p>
-      <span class="read-badge">✓ Read</span>
-    </a>
-
-    <a class="chapter-card" href="story-05.html" data-chapter="05" style="--c:#9b5de5">
-      <span class="chapter-num">05</span>
-      <span class="chapter-icon">📐</span>
-      <h3>The Plan Before the Build</h3>
-      <p>Program design — prototyping, pseudocode, top-down design and the program life cycle</p>
-      <span class="read-badge">✓ Read</span>
-    </a>
-
-    <a class="chapter-card" href="story-06.html" data-chapter="06" style="--c:#ef6f6c">
-      <span class="chapter-num">06</span>
-      <span class="chapter-icon">🔧</span>
-      <h3>The Toolbox and the Translator</h3>
-      <p>Tools of a programmer — editors, compilers, interpreters, debuggers and IDEs</p>
-      <span class="read-badge">✓ Read</span>
-    </a>
-
-    <a class="chapter-card" href="story-07.html" data-chapter="07" style="--c:#f2a541">
-      <span class="chapter-num">07</span>
-      <span class="chapter-icon">🚪</span>
-      <h3>In and Out</h3>
-      <p>Input and output — what you give and what you get</p>
-      <span class="read-badge">✓ Read</span>
-    </a>
-
-    <a class="chapter-card" href="story-08.html" data-chapter="08" style="--c:#2a9d8f">
-      <span class="chapter-num">08</span>
-      <span class="chapter-icon">📦</span>
-      <h3>Boxes with Names</h3>
-      <p>Variables and assignment</p>
-      <span class="read-badge">✓ Read</span>
-    </a>
-
-    <a class="chapter-card" href="story-09.html" data-chapter="09" style="--c:#5b9bd5">
-      <span class="chapter-num">09</span>
-      <span class="chapter-icon">🫙</span>
-      <h3>The Jar with a Seal</h3>
-      <p>Constants — fixed values with descriptive names</p>
-      <span class="read-badge">✓ Read</span>
-    </a>
-
-    <a class="chapter-card" href="story-10.html" data-chapter="10" style="--c:#9b5de5">
-      <span class="chapter-num">10</span>
-      <span class="chapter-icon">✏️</span>
-      <h3>Notes in the Margin</h3>
-      <p>Comments — writing for the humans who read your code</p>
-      <span class="read-badge">✓ Read</span>
-    </a>
-
-    <a class="chapter-card" href="story-11.html" data-chapter="11" style="--c:#ef6f6c">
-      <span class="chapter-num">11</span>
-      <span class="chapter-icon">🔢</span>
-      <h3>Numbers, Words and Yes-or-No</h3>
-      <p>Data types — number, string and Boolean</p>
-      <span class="read-badge">✓ Read</span>
-    </a>
-
-    <a class="chapter-card" href="story-12.html" data-chapter="12" style="--c:#f2a541">
-      <span class="chapter-num">12</span>
-      <span class="chapter-icon">✨</span>
-      <h3>The Math Magician</h3>
-      <p>Operators — arithmetic, comparison and logical</p>
-      <span class="read-badge">✓ Read</span>
-    </a>
-
-    <a class="chapter-card" href="story-13.html" data-chapter="13" style="--c:#2a9d8f">
-      <span class="chapter-num">13</span>
-      <span class="chapter-icon">🍜</span>
-      <h3>The Alphabet Soup</h3>
-      <p>Strings and text processing</p>
-      <span class="read-badge">✓ Read</span>
-    </a>
-
-    <a class="chapter-card" href="story-14.html" data-chapter="14" style="--c:#5b9bd5">
-      <span class="chapter-num">14</span>
-      <span class="chapter-icon">🌦️</span>
-      <h3>If It Rains</h3>
-      <p>Conditionals — if / else and branching paths</p>
-      <span class="read-badge">✓ Read</span>
-    </a>
-
-    <a class="chapter-card" href="story-15.html" data-chapter="15" style="--c:#9b5de5">
-      <span class="chapter-num">15</span>
-      <span class="chapter-icon">🔁</span>
-      <h3>The Hundred Tiles</h3>
-      <p>Loops and iteration — for, while, until</p>
-      <span class="read-badge">✓ Read</span>
-    </a>
-
-    <a class="chapter-card" href="story-16.html" data-chapter="16" style="--c:#ef6f6c">
-      <span class="chapter-num">16</span>
-      <span class="chapter-icon">👥</span>
-      <h3>The Helpers</h3>
-      <p>Subprograms — procedures, functions, parameters and return values</p>
-      <span class="read-badge">✓ Read</span>
-    </a>
-
-    <a class="chapter-card" href="story-17.html" data-chapter="17" style="--c:#f2a541">
-      <span class="chapter-num">17</span>
-      <span class="chapter-icon">🧰</span>
-      <h3>The Borrowed Toolbox</h3>
-      <p>Modules, libraries and APIs</p>
-      <span class="read-badge">✓ Read</span>
-    </a>
-
-    <a class="chapter-card" href="story-18.html" data-chapter="18" style="--c:#2a9d8f">
-      <span class="chapter-num">18</span>
-      <span class="chapter-icon">🚂</span>
-      <h3>The Train of Puff-Puffs</h3>
-      <p>Arrays — lists, elements, index, length and dynamic arrays</p>
-      <span class="read-badge">✓ Read</span>
-    </a>
-
-    <a class="chapter-card" href="story-19.html" data-chapter="19" style="--c:#5b9bd5">
-      <span class="chapter-num">19</span>
-      <span class="chapter-icon">🌳</span>
-      <h3>Inside the Treehouse</h3>
-      <p>Scope and lifetime — local and global</p>
-      <span class="read-badge">✓ Read</span>
-    </a>
-
-    <a class="chapter-card" href="story-20.html" data-chapter="20" style="--c:#9b5de5">
-      <span class="chapter-num">20</span>
-      <span class="chapter-icon">🥟</span>
-      <h3>The Chin-Chin Cutter Family</h3>
-      <p>Object-oriented basics — class, object, property, method, inheritance, encapsulation, polymorphism</p>
-      <span class="read-badge">✓ Read</span>
-    </a>
-
-    <a class="chapter-card" href="story-21.html" data-chapter="21" style="--c:#ef6f6c">
-      <span class="chapter-num">21</span>
-      <span class="chapter-icon">🔍</span>
-      <h3>The Lost Cowrie</h3>
-      <p>Searching and sorting — sequential and binary search, sorting algorithms, Big-O</p>
-      <span class="read-badge">✓ Read</span>
-    </a>
-
-    <a class="chapter-card" href="story-22.html" data-chapter="22" style="--c:#f2a541">
-      <span class="chapter-num">22</span>
-      <span class="chapter-icon">🏺</span>
-      <h3>The Calabash Inside the Calabash</h3>
-      <p>Recursion — a helper that helps itself, and the base case that stops it</p>
-      <span class="read-badge">✓ Read</span>
-    </a>
-
-    <a class="chapter-card" href="story-23.html" data-chapter="23" style="--c:#2a9d8f">
-      <span class="chapter-num">23</span>
-      <span class="chapter-icon">🐛</span>
-      <h3>The Wobbly Bug</h3>
-      <p>Bugs and debugging — syntax, run-time and logic errors</p>
-      <span class="read-badge">✓ Read</span>
-    </a>
-
-    <a class="chapter-card" href="story-24.html" data-chapter="24" style="--c:#5b9bd5">
-      <span class="chapter-num">24</span>
-      <span class="chapter-icon">🫖</span>
-      <h3>The Tester's Tea Party</h3>
-      <p>Testing — boundary conditions, alpha and beta testing</p>
-      <span class="read-badge">✓ Read</span>
-    </a>
-
-    <a class="chapter-card" href="story-25.html" data-chapter="25" style="--c:#9b5de5">
-      <span class="chapter-num">25</span>
-      <span class="chapter-icon">🛺</span>
-      <h3>The Rickshaw Tune-Up</h3>
-      <p>Optimization — faster data structures, better algorithms, leaner code</p>
-      <span class="read-badge">✓ Read</span>
-    </a>
-
-    <a class="chapter-card" href="story-26.html" data-chapter="26" style="--c:#ef6f6c">
-      <span class="chapter-num">26</span>
-      <span class="chapter-icon">🔔</span>
-      <h3>The Shop Counter and the Bell</h3>
-      <p>User interface and events — windows, controls, and event handlers</p>
-      <span class="read-badge">✓ Read</span>
-    </a>
-
-    <a class="chapter-card" href="story-27.html" data-chapter="27" style="--c:#f2a541">
-      <span class="chapter-num">27</span>
-      <span class="chapter-icon">🎒</span>
-      <h3>The Backpack, the Line and the Plates</h3>
-      <p>Data structures — map, set, stack, queue</p>
-      <span class="read-badge">✓ Read</span>
-    </a>
-
-    <a class="chapter-card" href="story-28.html" data-chapter="28" style="--c:#2a9d8f">
-      <span class="chapter-num">28</span>
-      <span class="chapter-icon">🪧</span>
-      <h3>The Painted Signboard</h3>
-      <p>HTML — tags, attributes, lists, hyperlinks, images and forms</p>
-      <span class="read-badge">✓ Read</span>
-    </a>
-
-    <a class="chapter-card" href="story-29.html" data-chapter="29" style="--c:#5b9bd5">
-      <span class="chapter-num">29</span>
-      <span class="chapter-icon">💬</span>
-      <h3>The Talking Signboard</h3>
-      <p>JavaScript — variables, functions, dialog boxes and events on the web</p>
-      <span class="read-badge">✓ Read</span>
-    </a>
-
-    <a class="chapter-card" href="story-30.html" data-chapter="30" style="--c:#9b5de5">
-      <span class="chapter-num">30</span>
-      <span class="chapter-icon">🪟</span>
-      <h3>The Applet in the Window</h3>
-      <p>Java applets — byte code, the Java Virtual Machine and the APPLET tag</p>
-      <span class="read-badge">✓ Read</span>
-    </a>
-
+  <div class="toc-part">
+    <h3>Chapters</h3>
+    <ol>
+      <li><a href="#ch-01">The Baobab Puzzle — Computational thinking</a></li>
+      <li><a href="#ch-02">The Robot's Breakfast — Program, instruction, sequence</a></li>
+      <li><a href="#ch-03">The Tongues of Babel — Programming languages</a></li>
+      <li><a href="#ch-04">Speaking Computer — Code, statement, syntax</a></li>
+      <li><a href="#ch-05">The Plan Before the Build — Program design</a></li>
+      <li><a href="#ch-06">The Toolbox and the Translator — Editors, compilers, interpreters</a></li>
+      <li><a href="#ch-07">In and Out — Input and output</a></li>
+      <li><a href="#ch-08">Boxes with Names — Variables and assignment</a></li>
+      <li><a href="#ch-09">The Jar with a Seal — Constants</a></li>
+      <li><a href="#ch-10">Notes in the Margin — Comments</a></li>
+      <li><a href="#ch-11">Numbers, Words and Yes-or-No — Data types</a></li>
+      <li><a href="#ch-12">The Math Magician — Operators</a></li>
+      <li><a href="#ch-13">The Alphabet Soup — Strings and text processing</a></li>
+      <li><a href="#ch-14">If It Rains — Conditionals and branching</a></li>
+      <li><a href="#ch-15">The Hundred Tiles — Loops and iteration</a></li>
+      <li><a href="#ch-16">The Helpers — Subprograms and functions</a></li>
+      <li><a href="#ch-17">The Borrowed Toolbox — Libraries and APIs</a></li>
+      <li><a href="#ch-18">The Train of Puff-Puffs — Arrays</a></li>
+      <li><a href="#ch-19">Inside the Treehouse — Scope and lifetime</a></li>
+      <li><a href="#ch-20">The Chin-Chin Cutter Family — Object-oriented basics</a></li>
+      <li><a href="#ch-21">The Lost Cowrie — Searching and sorting</a></li>
+      <li><a href="#ch-22">The Calabash Inside the Calabash — Recursion</a></li>
+      <li><a href="#ch-23">The Wobbly Bug — Bugs and debugging</a></li>
+      <li><a href="#ch-24">The Tester's Tea Party — Testing</a></li>
+      <li><a href="#ch-25">The Rickshaw Tune-Up — Optimization</a></li>
+      <li><a href="#ch-26">The Shop Counter and the Bell — User interface and events</a></li>
+      <li><a href="#ch-27">The Backpack, the Line and the Plates — Data structures</a></li>
+      <li><a href="#ch-28">The Painted Signboard — HTML</a></li>
+      <li><a href="#ch-29">The Talking Signboard — JavaScript</a></li>
+      <li><a href="#ch-30">The Applet in the Window — Java applets</a></li>
+    </ol>
   </div>
+
+  <nav class="book-nav">
+    <button class="nav-button" data-nav="prev">← Cover</button>
+    <button class="nav-button" data-nav="next">Chapter 1 →</button>
+  </nav>
 </section>
 
-<footer class="site-foot">The Coding Storybook · for curious kids ✦</footer>
-<footer class="site-foot-2">Credit <a href="https://agunechemba.name.ng">Agunechemba Ekene</a></footer>
+<!-- ============================ CHAPTER 1 ============================ -->
+<section class="book-page chapter-page" id="ch-01">
+  <header class="chapter-header">
+    <p class="chapter-part">Chapter 1</p>
+    <h2>The Baobab Puzzle</h2>
+    <p class="chapter-tagline">🧩 Computational Thinking</p>
+  </header>
 
-<script src="book.js"></script>
+  <div class="chapter-story">
+    <p>Amara had a big puzzle. It had one thousand pieces! "I can't do this," she said. "It's too big!"</p>
+    <p>Mama sat with her. "Don't look at all the pieces. First, find the flat ones for the edge." Amara did. The big pile got small. That is <strong>breaking a big job into little jobs</strong>. Programmers call this problem-solving: the hardest part of programming is identifying all the little problems that make up the big problem. A computer is completely stupid, so you must tell it how to do everything — one small step at a time.</p>
+    <p>Then Amara saw that orange pieces are sky. Brown pieces are tree. Green pieces are leaves. She made little piles. That is <strong>seeing what is the same</strong> — grouping similar things together so you can handle them as a set instead of one by one.</p>
+    <p>"Do we need every leaf?" asked Mama. "No! Just the branches." That is <strong>keeping only what matters</strong> — ignoring unnecessary details so your plan stays simple and your instructions stay small.</p>
+    <p>Last, Amara made a plan: edge first, then sky, then tree, then leaves. That is a <strong>plan in steps</strong> — programmers call it a top-down design. By bedtime, the puzzle was done!</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Big Idea</h3>
+    <p>Big jobs are easy when you: break them into small jobs, see what is the same, keep only what matters, and go step by step. This is computational thinking — the problem-solving skill every programmer uses.</p>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It!</h3>
+    <p>Think of a big job, like cleaning your room. What small jobs can you do first? What is the same? What steps come first? Write your plan as a numbered list — that is your first program design.</p>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button" data-nav="prev">← Contents</button>
+    <button class="nav-button" data-nav="next">Next →</button>
+  </nav>
+</section>
+
+<!-- ============================ CHAPTER 2 ============================ -->
+<section class="book-page chapter-page" id="ch-02">
+  <header class="chapter-header">
+    <p class="chapter-part">Chapter 2</p>
+    <h2>The Robot's Breakfast</h2>
+    <p class="chapter-tagline">🤖 Program, Instruction, Sequence</p>
+  </header>
+
+  <div class="chapter-story">
+    <p>Tino the robot wanted fried plantain. "Fry the plantain," said Sade. Tino picked up the whole bunch and dropped it in the pot. Oil went everywhere!</p>
+    <p>"No, no," said Sade. "You need small steps. One at a time." A computer does nothing without someone telling it what to do, step by step. It cannot guess, and it cannot fill in gaps.</p>
+    <p>So Sade wrote:</p>
+    <p><strong>1.</strong> Pick one plantain. <strong>2.</strong> Peel it. <strong>3.</strong> Cut it. <strong>4.</strong> Heat the oil. <strong>5.</strong> Fry it. <strong>6.</strong> Add salt.</p>
+    <p>Tino did every step. Yum! But then Sade moved step 6 to the top. Tino put salt on a plantain that was not even peeled. Silly Tino!</p>
+    <p>"The order matters," said Sade. A list of steps in the right order is a <strong>program</strong>. Programmers call this <strong>sequential instruction</strong> — the computer follows instructions one after another, from the first instruction at the top to the last instruction at the bottom. If you change the order, the program does something different — or something silly.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Big Idea</h3>
+    <p>A program is a list of small steps. The steps must be in the right order. Robots do just what you say — nothing more, nothing less. Sequential instructions are the simplest building block of every program.</p>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It!</h3>
+    <p>Tell a grown-up how to wash your hands in steps. Now say the steps in a silly order. What goes wrong? That is why programs need the right sequence.</p>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button" data-nav="prev">← Previous</button>
+    <button class="nav-button" data-nav="next">Next →</button>
+  </nav>
+</section>
+
+<!-- ============================ CHAPTER 3 ============================ -->
+<section class="book-page chapter-page" id="ch-03">
+  <header class="chapter-header">
+    <p class="chapter-part">Chapter 3</p>
+    <h2>The Tongues of Babel</h2>
+    <p class="chapter-tagline">🗣️ Programming Languages</p>
+  </header>
+
+  <div class="chapter-story">
+    <p>In the village of Babel, everyone spoke to computers. But no two people used the same tongue.</p>
+    <p>Old Man Machine spoke in zeros and ones: <code>0010 1010</code>. The computer understood perfectly, but no human could read it. His grandson Assembly spoke in short commands — <code>JMP</code>, <code>MOV</code>, <code>ADD</code> — one command for many machine codes. Easier, but still tied to one processor.</p>
+    <p>Then came C, the portable assembler. C looked a little like English: <code>printf("Hello!");</code>. C could travel between computers, but it was dangerous — a careless C program could crash the whole machine. Next came the <strong>high-level languages</strong>: BASIC, Pascal, FORTRAN, COBOL. They looked even more like human language. <code>PRINT "Hello!"</code> was all BASIC needed. Easier to learn, safer to run, but slower.</p>
+    <p>As computers grew fancier, new tongues appeared. <strong>RAD languages</strong> like Visual Basic let you drag buttons onto a window. <strong>Database languages</strong> like SQL stored and retrieved information. <strong>Scripting languages</strong> like AppleScript and Revolution extended existing programs. <strong>Web languages</strong> like HTML, JavaScript, and Java made the Internet talk.</p>
+    <p>"Which tongue is best?" asked a child. "None," said the elder. "The best tongue is the one that solves your problem fastest. People argue about languages like they argue about colours — but a great BASIC programmer will always beat a mediocre C++ programmer."</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Big Idea</h3>
+    <p>Different languages exist for different jobs: assembly for speed, C for portability, BASIC for learning, SQL for databases, JavaScript for web pages. No single language is "best" — the right language depends on the task.</p>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It!</h3>
+    <p>Name a job for each tongue: Which language would you use to build a website? A database for a school? A game? A quick program to learn programming? There is no single right answer — but some fit better than others.</p>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button" data-nav="prev">← Previous</button>
+    <button class="nav-button" data-nav="next">Next →</button>
+  </nav>
+</section>
+
+<!-- ============================ CHAPTER 4 ============================ -->
+<section class="book-page chapter-page" id="ch-04">
+  <header class="chapter-header">
+    <p class="chapter-part">Chapter 4</p>
+    <h2>Speaking Computer</h2>
+    <p class="chapter-tagline">🐢 Code, Statement, Syntax</p>
+  </header>
+
+  <div class="chapter-story">
+    <p>A little tortoise lived on a hill. He only spoke computer. "Hello," said Ada. The tortoise said nothing.</p>
+    <p>So Ada learned his words. One line is one idea. She said <code>hide()</code> and the tortoise hid in his shell. She said <code>walk(3)</code> and he walked three steps. Each line is a <strong>statement</strong>. Programmers call each instruction a <em>line of code</em>, and the collection of all these lines saved in a file is called the <strong>source code</strong>.</p>
+    <p>But the tortoise was fussy. If Ada forgot a bracket, he sneezed. If she spelled a word wrong, he hiccuped. The fussy rules are called <strong>syntax</strong>. A syntax error happens when you type a command incorrectly — such as misspelling <code>PRINT</code> as <code>PRINNT</code> or forgetting a semicolon. The computer will not guess what you meant; it simply refuses to run the program.</p>
+    <p>"Why so fussy?" asked Ada. "Because," said the tortoise, "if I guess, I might do the wrong thing!"</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Big Idea</h3>
+    <p>Code is made of lines. Each line tells the computer one thing to do. The rules for writing it are called syntax. A single misspelling can stop the whole program from working.</p>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It!</h3>
+    <p>Say this sentence: "the cat sat the mat on." It sounds funny! Now fix it: "the cat sat on the mat." You just fixed syntax!</p>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button" data-nav="prev">← Previous</button>
+    <button class="nav-button" data-nav="next">Next →</button>
+  </nav>
+</section>
+
+<!-- ============================ CHAPTER 5 ============================ -->
+<section class="book-page chapter-page" id="ch-05">
+  <header class="chapter-header">
+    <p class="chapter-part">Chapter 5</p>
+    <h2>The Plan Before the Build</h2>
+    <p class="chapter-tagline">📐 Program Design</p>
+  </header>
+
+  <div class="chapter-story">
+    <p>The carpenter was about to build a chair. He picked up his saw. His apprentice said, "Wait! What kind of chair? Who will sit on it? Will it be indoors or outdoors?" The carpenter stopped.</p>
+    <p>Before writing any program, you must answer four questions: <strong>What problem does it solve?</strong> <strong>Who will use it?</strong> <strong>What computer will run it?</strong> and <strong>How skilled are you?</strong> If you can't state the problem clearly, you can't design the program.</p>
+    <p>The carpenter drew a picture first — a <strong>prototype</strong>. It showed what the chair would look like, but you couldn't sit on it yet. Programmers do the same: they mock up the user interface before writing any code. Then they write <strong>pseudocode</strong> — plain-English steps that show how the program will work, without worrying about syntax.</p>
+    <p>"Start at the top," said the carpenter. "The whole chair. Then the legs. Then the joints. Then the screws." That is <strong>top-down design</strong>: break the big problem into smaller and smaller pieces until each piece is clear.</p>
+    <p>Wise programmers never skip this step. Programs written without a plan become <strong>spaghetti</strong> — tangled, impossible to fix, and often abandoned. A program's life has three phases: <strong>development</strong> (building it), <strong>maintenance</strong> (fixing bugs as users find them), and <strong>upgrade</strong> (adding new features to sell the next version). Testing comes in two flavours: <strong>alpha testing</strong> (you test it yourself) and <strong>beta testing</strong> (strangers test it for you).</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Big Idea</h3>
+    <p>Plan before you build. Know the problem, the user, the target computer, and your own skill. Prototype the look, pseudocode the logic, and break the big job into small pieces. Programs written without a plan become spaghetti.</p>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It!</h3>
+    <p>Design a "Hello" program on paper. Who will use it? What computer will run it? What will the screen look like (prototype)? What steps will it follow (pseudocode)? Now you are ready to write it.</p>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button" data-nav="prev">← Previous</button>
+    <button class="nav-button" data-nav="next">Next →</button>
+  </nav>
+</section>
+
+<!-- ============================ CHAPTER 6 ============================ -->
+<section class="book-page chapter-page" id="ch-06">
+  <header class="chapter-header">
+    <p class="chapter-part">Chapter 6</p>
+    <h2>The Toolbox and the Translator</h2>
+    <p class="chapter-tagline">🧰 Editors, Compilers, Interpreters</p>
+  </header>
+
+  <div class="chapter-story">
+    <p>A programmer's workbench is full of tools. The first is the <strong>editor</strong> — a simple word processor where you type your source code and save it as a text file. No fancy fonts, no underlining — just characters.</p>
+    <p>The second tool is the translator, and there are three kinds. A <strong>compiler</strong> reads your entire program, converts it all into machine language, and saves the result in a separate file — often called an EXE. Do it once and you're done. An <strong>interpreter</strong> translates your program one line at a time and stores the result in memory. Every time you run the program, it must translate again. A <strong>p-code</strong> compiler is a hybrid: it translates your code into an intermediate form (byte code), and a special run-time program finishes the translation on each machine. Java is the most famous user of p-code.</p>
+    <p>The third tool is the <strong>debugger</strong>. It lets you <em>step</em> through your program line by line, set <em>breakpoints</em> to pause in specific places, and <em>watch</em> your variables change values. Without a debugger, finding bugs is like searching for a needle in a haystack.</p>
+    <p>Most compilers bundle editor, compiler, and debugger into one program called an <strong>IDE</strong> (integrated development environment). When your program is ready, you add two more tools: a <strong>Help-file creator</strong> (so users can find help on-screen) and an <strong>installation program</strong> (so users can copy your program to their computer without manual errors).</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Big Idea</h3>
+    <p>A programmer needs an editor to write, a compiler or interpreter to translate, and a debugger to fix. A compiler translates the whole program once; an interpreter translates one line at a time; p-code is a hybrid. An IDE combines all three.</p>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It!</h3>
+    <p>Imagine translating a whole book at once (compiler) versus translating a speech sentence by sentence live (interpreter). Which would be faster to read afterward? Which would be faster to start? Which would you prefer for a big project?</p>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button" data-nav="prev">← Previous</button>
+    <button class="nav-button" data-nav="next">Next →</button>
+  </nav>
+</section>
+
+<!-- ============================ CHAPTER 7 ============================ -->
+<section class="book-page chapter-page" id="ch-07">
+  <header class="chapter-header">
+    <p class="chapter-part">Chapter 7</p>
+    <h2>In and Out</h2>
+    <p class="chapter-tagline">🚪 Input and Output</p>
+  </header>
+
+  <div class="chapter-story">
+    <p>There was a doorbell at a shop. When you pressed it, it asked, "Who are you?" You said your name. It said, "Welcome, Zuri!"</p>
+    <p>Zuri thought about it all day. Pressing the button is something going <em>in</em>. The welcome is something coming <em>out</em>.</p>
+    <p>Later, Zuri made zobo. Flowers and water go in. Cold zobo comes out. The things going in are the <strong>input</strong>. The things coming out are the <strong>output</strong>.</p>
+    <p>Every program has a door for things going in and a door for things coming out. A program does nothing more than tell the computer how to accept some type of input, manipulate that input, and spit it back out in some form that humans find useful. A word processor takes the characters you type (input) and displays organized text (output). A game takes keystrokes (input) and moves a figure on-screen (output). A web browser takes HTML codes (input) and displays web pages (output). Input and output are the two doors every program needs.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Big Idea</h3>
+    <p>Input is what you give the program. Output is what the program gives back. Every useful program has both doors: it accepts data, manipulates it, and produces a result.</p>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It!</h3>
+    <p>Look at a blender. What goes in? What comes out? Now try a toy car. What goes in? What comes out? Name the input and output for each.</p>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button" data-nav="prev">← Previous</button>
+    <button class="nav-button" data-nav="next">Next →</button>
+  </nav>
+</section>
+
+<!-- ============================ CHAPTER 8 ============================ -->
+<section class="book-page chapter-page" id="ch-08">
+  <header class="chapter-header">
+    <p class="chapter-part">Chapter 8</p>
+    <h2>Boxes with Names</h2>
+    <p class="chapter-tagline">📦 Variables and Assignment</p>
+  </header>
+
+  <div class="chapter-story">
+    <p>Grandpa had many boxes. Each box had a name on it. One said "millet." One said "groundnuts." One said "snacks."</p>
+    <p>"A box with a name is a <strong>variable</strong>," said Grandpa. "The name is the label. What is inside is the value." A variable acts like a box that can hold data, and it has a descriptive name so you can identify which variable to use. The computer handles the memory address for you; you only need to remember the name.</p>
+    <p>He put three mangoes in the box called "snacks." Then he took them out and put in a banana. "Where did the mangoes go?" asked Ada. "A box holds one thing," said Grandpa. "Put a new thing in, and the old thing is gone." A variable can store only one chunk of data at a time — the moment you put another chunk in, the variable dumps the old data and stores the new data. That is why we call it a <em>variable</em>: its contents can vary.</p>
+    <p>Ada made a box called "score." She put 0 in it. Then she won a game and put 10 in. Same box. New number! The act of putting a value into a variable is called <strong>assignment</strong>. In most languages you use the equal sign: <code>score = 10</code> means "store the value 10 in the box named score."</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Big Idea</h3>
+    <p>A variable is a box with a name. It holds one thing at a time. When you put in something new, the old thing goes away. Choose descriptive names like <code>FirstName</code> or <code>CustomerIDNumber</code> so your code is easy to read.</p>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It!</h3>
+    <p>Draw three boxes. Name them "name," "age," and "score." Fill them in. Now change "score" to a bigger number. What happened to the old number? That is assignment in action.</p>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button" data-nav="prev">← Previous</button>
+    <button class="nav-button" data-nav="next">Next →</button>
+  </nav>
+</section>
+
+<!-- ============================ CHAPTER 9 ============================ -->
+<section class="book-page chapter-page" id="ch-09">
+  <header class="chapter-header">
+    <p class="chapter-part">Chapter 9</p>
+    <h2>The Jar with a Seal</h2>
+    <p class="chapter-tagline">🫙 Constants</p>
+  </header>
+
+  <div class="chapter-story">
+    <p>In the pantry stood a jar with a wax seal. On the seal was written: <strong>Interest Rate = 0.1975</strong>. Unlike the other jars, this one never changed its contents. It was a <strong>constant</strong>.</p>
+    <p>"What is the number 0.1975?" asked the child. "Without the seal," said the elder, "you would have to guess. Is it a tax? A score? The number of cats in the village? But with the seal, you know exactly what it means." A constant is a fixed value given a descriptive name — it makes the meaning of a number clear at a glance.</p>
+    <p>Later, the village changed the interest rate. The elder only had to break the seal on one jar and write the new number. "Why not just change the number everywhere it appears?" asked the child. "Because it appears twenty times in our records," said the elder. "Changing it once updates every copy. Changing it twenty times risks missing one." A constant lets you update a value in one place, no matter how large the program is.</p>
+    <p>Variables vary; constants don't. In C++ you write <code>const double InterestRate = 0.1975;</code>. In REALbasic, <code>Const InterestRate = 0.1975</code>. In Revolution, <code>constant InterestRate = 0.1975</code>. The jar stays sealed — until you choose to open it.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Big Idea</h3>
+    <p>A constant is a fixed value with a descriptive name. It makes numbers meaningful and lets you update a value in one place instead of everywhere. Variables vary; constants don't.</p>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It!</h3>
+    <p>Look for a number in your life that always stays the same — your birth year, the number of legs on a spider, the boiling point of water. Give it a descriptive name. That is your first constant.</p>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button" data-nav="prev">← Previous</button>
+    <button class="nav-button" data-nav="next">Next →</button>
+  </nav>
+</section>
+
+<!-- ============================ CHAPTER 10 ============================ -->
+<section class="book-page chapter-page" id="ch-10">
+  <header class="chapter-header">
+    <p class="chapter-part">Chapter 10</p>
+    <h2>Notes in the Margin</h2>
+    <p class="chapter-tagline">✏️ Comments</p>
+  </header>
+
+  <div class="chapter-story">
+    <p>In the margins of an old book, a child found handwritten notes. They explained who wrote the book, when, and what each difficult passage meant. The book itself said one thing; the notes explained why.</p>
+    <p>Programmers write notes in the margins of their code. These notes are called <strong>comments</strong>. A comment might say who wrote the program, when it was created and last changed, what the program does, how it works, or any known problems. The computer ignores comments completely — they exist only for humans to read.</p>
+    <p>Different languages write comments differently. In Liberty BASIC: <code>REM</code> or an apostrophe <code>'</code>. In C++: <code>//</code> for one line or <code>/* ... */</code> for several. In REALbasic: <code>REM</code>, <code>'</code>, or <code>//</code>. In Revolution: <code>#</code> or <code>--</code>. The style changes; the purpose stays the same.</p>
+    <p>Comments also have a clever trick. You can <em>comment out</em> a line — wrap it in comment symbols — to temporarily ignore it while testing. Instead of deleting a line and retyping it later, just hide it behind a comment.</p>
+    <p>But too many comments become a nuisance. The best comment is a clear piece of code. Write code so readable that it explains itself; then add comments only where the purpose is not obvious.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Big Idea</h3>
+    <p>Comments are notes for humans, ignored by the computer. Use them to explain who, what, when, and why — or to temporarily hide lines of code. Write clear code first; add comments where they help.</p>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It!</h3>
+    <p>Write a sentence about what you did today. Now add a note in the margin explaining why you did it. That note is a comment. Now imagine hiding the sentence behind a comment so it doesn't appear — that is commenting out.</p>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button" data-nav="prev">← Previous</button>
+    <button class="nav-button" data-nav="next">Next →</button>
+  </nav>
+</section>
+
+<!-- ============================ CHAPTER 11 ============================ -->
+<section class="book-page chapter-page" id="ch-11">
+  <header class="chapter-header">
+    <p class="chapter-part">Chapter 11</p>
+    <h2>Numbers, Words and Yes-or-No</h2>
+    <p class="chapter-tagline">🔢 Data Types</p>
+  </header>
+
+  <div class="chapter-story">
+    <p>Three friends moved into the computer. Num loves numbers: 3, 42, 1000. Word loves letters: "hello," "jollof," "mango." Bool only says two things: <em>true</em> or <em>false</em>. He says them very loudly.</p>
+    <p>Someone asked, "What is 2 + 3?" Num said 5. Fast! Then Word tried. "Two plus three is… twenty-three!" Everyone stared. Word glued the numbers together!</p>
+    <p>"That is because you are a <strong>string</strong>," said Num. "You join letters. I am a <strong>number</strong>. I add." Bool nodded. "True," he said.</p>
+    <p>Each one has its own job. Numbers count. Strings are for words. Booleans answer yes or no. The three most common data types are whole numbers (integers like 3, 45, 102), decimal numbers (single- or double-precision like 3.1415), and text (strings like "hello"). Some languages add more types — a <strong>Boolean</strong> holds only True or False, a <strong>byte</strong> holds values 0–255, and a <strong>long</strong> holds extremely large integers.</p>
+    <p>Type-checking forces you to declare what type a variable holds so you never accidentally store a decimal in a whole-number box — which would be as silly as storing 1.48 children in a variable.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Big Idea</h3>
+    <p>There are three basic types: numbers (3, 7.5), strings ("hi," "cat"), and Booleans (true, false). Each type has its own rules — a string joins, a number adds, a Boolean answers yes or no.</p>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It!</h3>
+    <p>Which is which? 12, "cat," true, "42," false, 3.5. Careful: "42" has quotes, so it is a string! The number 42 has no quotes, so it is an integer.</p>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button" data-nav="prev">← Previous</button>
+    <button class="nav-button" data-nav="next">Next →</button>
+  </nav>
+</section>
+
+<!-- ============================ CHAPTER 12 ============================ -->
+<section class="book-page chapter-page" id="ch-12">
+  <header class="chapter-header">
+    <p class="chapter-part">Chapter 12</p>
+    <h2>The Math Magician</h2>
+    <p class="chapter-tagline">✨ Operators</p>
+  </header>
+
+  <div class="chapter-story">
+    <p>The Math Magician had tiny wands. "Each wand does one trick," she said. "Only one."</p>
+    <p>She waved the <strong>adding</strong> wands. <em>+</em> puts numbers together. <em>−</em> takes away. <em>*</em> makes more. <em>/</em> shares out. Then the less-common wands: <em>\</em> does integer division (25 \ 6 gives 4), <em>mod</em> gives the remainder (25 mod 6 gives 1), and <em>^</em> does exponentiation (2 ^ 3 = 8). She also carried built-in math functions — <code>ABS</code> for absolute value, <code>SIN</code>, <code>COS</code>, <code>TAN</code>, <code>LOG</code>, <code>SQR</code> — ready-made tricks for hard problems.</p>
+    <p>Then she showed the <strong>asking</strong> wands. <em>&gt;</em> asks, "Is this bigger?" <em>&lt;</em> asks, "Is this smaller?" <em>==</em> asks, "Are these the same?" <em>&gt;=</em>, <em>&lt;=</em>, and <em>&lt;&gt;</em> complete the family. These are relational operators — they always say yes or no.</p>
+    <p>Last were the <strong>yes/no</strong> wands. <em>AND</em> says yes only if both are yes. <em>OR</em> says yes if one is yes. <em>NOT</em> turns yes into no and no into yes. Cheeky NOT! These are Boolean operators.</p>
+    <p>One more secret: the Magician follows a strict order. Exponentiation first, then multiplication and division, then integer division and modulo, then addition and subtraction. Use parentheses to force a different order: <code>3 + 4 ^ 5</code> is 1027, but <code>(3 + 4) ^ 5</code> is 16807.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Big Idea</h3>
+    <p>Some wands do math: + − * / \ mod ^. Some ask questions: &gt; &lt; == &gt;= &lt;= &lt;&gt;. Some join yes and no: AND, OR, NOT. Parentheses always win — they force the computer to calculate inside them first.</p>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It!</h3>
+    <p>Say yes or no: Is 5 bigger than 3? Is 2 bigger than 7? Is "yes AND no" true? What about "NOT no"? Now try: what is 3 + 4 * 2? (Hint: multiplication before addition — the answer is 11, not 14!)</p>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button" data-nav="prev">← Previous</button>
+    <button class="nav-button" data-nav="next">Next →</button>
+  </nav>
+</section>
+
+<!-- ============================ CHAPTER 13 ============================ -->
+<section class="book-page chapter-page" id="ch-13">
+  <header class="chapter-header">
+    <p class="chapter-part">Chapter 13</p>
+    <h2>The Alphabet Soup</h2>
+    <p class="chapter-tagline">🍜 Strings and Text Processing</p>
+  </header>
+
+  <div class="chapter-story">
+    <p>In the soup lived a string named "jambo." It was not a word. It was beads on a line: j, a, m, b, o.</p>
+    <p>The string could tell you its <strong>length</strong>: five beads. It could show you bead 1: "a." It could shout "JAMBO!" or whisper "jambo." A string is anything you can type from the keyboard — letters, symbols, and even numbers. That is why <code>"555-1212"</code> in quotes is a string, while <code>555-1212</code> without quotes is the number -657. The quotation marks tell the computer "this is text, not math."</p>
+    <p>One day "nyama" met "choma." They hugged and became "nyamachoma." That is <strong>joining</strong>, also called concatenation. Some languages use <code>+</code> to join strings; others use <code>&amp;</code> or special commands. Watch out: if you forget the space, you get "helloworld" instead of "hello world."</p>
+    <p>"Text is just letters in a row," said the spoon. Programs convert strings to numbers with functions like <code>VAL</code> (so you can do math on input the user typed) and numbers to strings with functions like <code>STR$</code> (so you can display results). A computer treats the number 53 and the string "53" as completely different — as different as a real cat and a picture of a cat.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Big Idea</h3>
+    <p>A string is text — letters in a row. You can count it, find a letter, make it loud, and join strings together. But "53" (a string) and 53 (a number) are not the same thing.</p>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It!</h3>
+    <p>Write your name. Count the letters. Now write it in CAPITALS. Now write it backwards, one letter at a time. Now join your name to a friend's name — what is the result?</p>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button" data-nav="prev">← Previous</button>
+    <button class="nav-button" data-nav="next">Next →</button>
+  </nav>
+</section>
+
+<!-- ============================ CHAPTER 14 ============================ -->
+<section class="book-page chapter-page" id="ch-14">
+  <header class="chapter-header">
+    <p class="chapter-part">Chapter 14</p>
+    <h2>If It Rains</h2>
+    <p class="chapter-tagline">🌦️ Conditionals and Branching</p>
+  </header>
+
+  <div class="chapter-story">
+    <p>Every morning Zainab looked at the sky. If it rained, she took an umbrella. If it was sunny, she took sunglasses. Then she went to school.</p>
+    <p>"You are using a <strong>conditional</strong>," said Mum. "Your day splits like a road. <strong>If</strong> it rains, go this way. <strong>Else</strong>, go that way." Programmers call this a branching statement. The simplest is the <strong>IF-THEN</strong> statement: if a Boolean expression is true, run one set of instructions; otherwise, skip them. Add an <strong>ELSE</strong> and the computer is forced to follow one path or the other.</p>
+    <p>Zainab saw forks everywhere. At the traffic light: if green, walk. Else, wait. In her game: if score is 100, you win. Else, keep playing.</p>
+    <p>Sometimes there are three roads: if rain, umbrella. Else if cold, scarf. Else, sunglasses. This is an <strong>IF-THEN-ELSEIF</strong> statement. When there are many exact values to check, programmers use a <strong>SELECT CASE</strong> (or <strong>switch</strong>) statement instead of a long chain of IFs.</p>
+    <p>"The computer is not clever," said Mum. "It just checks the question and takes the right road." That question is a Boolean expression — something either true or false, like <code>(4 &lt; 54)</code> or <code>(score == 100)</code>.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Big Idea</h3>
+    <p>If something is true, do this. Else, do that. This is called a conditional. Programs use conditionals to react to data — without them, a program does the same thing every time no matter what.</p>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It!</h3>
+    <p>Make an if/else for a traffic light. If green, what? If red, what? What about yellow? Now make it an if/elseif/else with three roads.</p>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button" data-nav="prev">← Previous</button>
+    <button class="nav-button" data-nav="next">Next →</button>
+  </nav>
+</section>
+
+<!-- ============================ CHAPTER 15 ============================ -->
+<section class="book-page chapter-page" id="ch-15">
+  <header class="chapter-header">
+    <p class="chapter-part">Chapter 15</p>
+    <h2>The Hundred Tiles</h2>
+    <p class="chapter-tagline">🔁 Loops and Iteration</p>
+  </header>
+
+  <div class="chapter-story">
+    <p>The yard had one hundred stones. All were muddy. Sani washed stone one. Then stone two. Then stone three. He was very tired!</p>
+    <p>Grandma showed him a trick. "Say this: <strong>Repeat one hundred times: wash a stone and move on.</strong>" Sani said it once. The stones got clean, one by one!</p>
+    <p>"That is a <strong>loop</strong>," said Grandma. "A <strong>for</strong> loop is when you know how many times. You give it a counter, a start value, an end value, and a step. It counts from start to end, repeating the instructions each time." Loops save you from typing nearly identical instructions over and over — a FOR-NEXT loop can print five numbers as easily as five million.</p>
+    <p>"A <strong>while</strong> loop is when you repeat until something stops — like: while the yard is muddy, keep washing." A WHILE loop repeats while a Boolean expression remains true; an <strong>UNTIL</strong> loop repeats until a Boolean expression becomes true. Both need a condition that will eventually change — otherwise you get an <strong>endless loop</strong> and the program freezes forever.</p>
+    <p>Sani looked at his food. <em>While there is food, take a bite.</em> He had been looping all his life!</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Big Idea</h3>
+    <p>A loop repeats things. Use <strong>for</strong> when you know the count. Use <strong>while</strong> when you wait for something to stop. Always make sure the loop can end — initialize the condition outside the loop and modify it inside.</p>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It!</h3>
+    <p>Find the loop in these: eating a bowl of rice, walking up ten steps, singing "Happy Birthday." Which one is a for loop? (Hint: walking up ten steps — you know the count!)</p>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button" data-nav="prev">← Previous</button>
+    <button class="nav-button" data-nav="next">Next →</button>
+  </nav>
+</section>
+
+<!-- ============================ CHAPTER 16 ============================ -->
+<section class="book-page chapter-page" id="ch-16">
+  <header class="chapter-header">
+    <p class="chapter-part">Chapter 16</p>
+    <h2>The Helpers</h2>
+    <p class="chapter-tagline">👥 Subprograms and Functions</p>
+  </header>
+
+  <div class="chapter-story">
+    <p>A big family lived in a house. Every morning there was chaos — everyone did every chore themselves. Breakfast took all day! Then the family hired <strong>helpers</strong>: one made chapati, one said hello to visitors, one swept the yard. Now each helper did one job. Breakfast took one hour.</p>
+    <p>Programmers do the same. They divide a large program into smaller parts called <strong>subprograms</strong>. A subprogram is a small program that solves a single task — like verifying a password or multiplying two numbers. The main program simply calls each helper when needed. The main program stays small; the helpers stay focused.</p>
+    <p>There are two kinds of helpers. A <strong>procedure</strong> just does a job and returns nothing — like the helper who sweeps the yard. A <strong>function</strong> does a job and gives something back — like the helper who makes chapati and hands you a plate. A function accepts data, performs a calculation, and returns a single result. You can assign that result to a variable or use it inside a formula: <code>Angle = cos(0.75)</code>.</p>
+    <p>Subprograms accept data through a <strong>parameter list</strong>. Each parameter is a slot; the actual value you pass in is an <strong>argument</strong>. The helper who makes chapati needs flour — flour is the parameter; the cup you hand over is the argument. When you call a function, the answer it gives back is its <strong>return value</strong>.</p>
+    <p>Why bother? Because subprograms let you <em>write once, use many times</em>. They make programs easier to read, easier to fix, and easier to share with other programmers. Each helper does one job well — and the whole household runs smoothly.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Big Idea</h3>
+    <p>A subprogram is a small program that solves one task. A procedure does a job; a function does a job and returns a value. Parameters are the slots; arguments are what you put in. Subprograms make big programs manageable.</p>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It!</h3>
+    <p>Make a function called <em>makeChapati(flour)</em>. What goes in the slot? What comes out? Now make <em>greet(name)</em>. What is the parameter? What is the return value? Now make a procedure called <em>sweepYard()</em> — does it return anything?</p>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button" data-nav="prev">← Previous</button>
+    <button class="nav-button" data-nav="next">Next →</button>
+  </nav>
+</section>
+
+<!-- ============================ CHAPTER 17 ============================ -->
+<section class="book-page chapter-page" id="ch-17">
+  <header class="chapter-header">
+    <p class="chapter-part">Chapter 17</p>
+    <h2>The Borrowed Toolbox</h2>
+    <p class="chapter-tagline">🧰 Libraries and APIs</p>
+  </header>
+
+  <div class="chapter-story">
+    <p>Nneka wanted to build a stool. First she made a hammer from a stone and a stick. It took all morning. It was a bad hammer.</p>
+    <p>"Why not use the toolbox?" asked her neighbour. Inside were hammers and saws that other people made. "A <strong>library</strong> is a toolbox of code. You borrow a tool and get on with your job." A library is a collection of tested subprograms stored in a separate file. Instead of writing every function yourself, you tell your program to include the library and then use its functions. That is what C++ does with <code>#include &lt;iostream.h&gt;</code> — it grabs a toolbox of input and output routines. Libraries save time, and tested library code is less likely to contain bugs than code you just wrote.</p>
+    <p>Later Nneka needed wood. She did not cut a tree. She went to the timber yard and asked for a plank. "That is an <strong>API</strong>," said her neighbour. "A friendly counter. You ask the right way, you get an answer." An API (Application Programming Interface) is the set of rules for talking to someone else's code: the names of the functions, what parameters they expect, and what they return. You do not need to know how the timber yard cuts the wood — you only need to know how to ask.</p>
+    <p>Nneka finished the stool before lunch! By dividing a large program into smaller subprograms stored in separate files, programmers keep their main program small, reuse code across projects, and let different people work on different parts at the same time.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Big Idea</h3>
+    <p>A library is code someone else made. You can use it. An API is the way you ask for something and get it back. Both save you from reinventing the hammer every morning.</p>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It!</h3>
+    <p>Name three real-life libraries: a recipe book, a spell-checker, a map app. What does each one save you from doing? For each one, what is the "API" — how do you ask it for help?</p>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button" data-nav="prev">← Previous</button>
+    <button class="nav-button" data-nav="next">Next →</button>
+  </nav>
+</section>
+
+<!-- ============================ CHAPTER 18 ============================ -->
+<section class="book-page chapter-page" id="ch-18">
+  <header class="chapter-header">
+    <p class="chapter-part">Chapter 18</p>
+    <h2>The Train of Puff-Puffs</h2>
+    <p class="chapter-tagline">🚂 Arrays</p>
+  </header>
+
+  <div class="chapter-story">
+    <p>Baker Bisi made a train from cake boxes. Each box held one puff-puff. Each box had a number. Box 0 held plain. Box 1 held coconut. Box 2 held ginger.</p>
+    <p>"Why does the first box have 0?" asked her helper. "Because computers count from zero!" said Bisi. "The number is the <strong>index</strong>. What is inside is the <strong>element</strong>." An array is a single variable name that can hold a list of data — but every element must be the same data type. Arrays that start counting from 0 are called <em>zero-based arrays</em>; some languages start at 1 and call them <em>one-based arrays</em>.</p>
+    <p>She counted: three boxes. "That is the <strong>length</strong>." When a new puff-puff came, she added a box. When one was eaten, the boxes moved up. A <strong>dynamic array</strong> can grow or shrink while the program runs; a <strong>static array</strong> has a fixed size you declare once and cannot change.</p>
+    <p>A train of things in order is called a <strong>list</strong> or an <strong>array</strong>. Arrays save you from creating dozens of nearly identical variables like <code>Name1</code>, <code>Name2</code>, <code>Name3</code> — instead you create one array and use a loop to store and retrieve items. When you need a grid of data, you can make a <strong>two-dimensional array</strong>; when you need even more, you can make three-, four-, or nine-dimensional arrays (though most programmers stick to one or two).</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Big Idea</h3>
+    <p>A list holds many things in order. Each thing is an element. Its place is the index. The number of things is the length. In most languages, the first index is 0, not 1 — watch out for off-by-one mistakes!</p>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It!</h3>
+    <p>Make a list of five friends. Who is at 0? Who is at 4? How many friends in all? (Hint: if you count 0, 1, 2, 3, 4, that is five friends.) Now try making a two-dimensional array — a grid of rows and columns.</p>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button" data-nav="prev">← Previous</button>
+    <button class="nav-button" data-nav="next">Next →</button>
+  </nav>
+</section>
+
+<!-- ============================ CHAPTER 19 ============================ -->
+<section class="book-page chapter-page" id="ch-19">
+  <header class="chapter-header">
+    <p class="chapter-part">Chapter 19</p>
+    <h2>Inside the Treehouse</h2>
+    <p class="chapter-tagline">🌳 Scope and Lifetime</p>
+  </header>
+
+  <div class="chapter-story">
+    <p>Kofi built a treehouse. It had a secret password, a mat, and a tin of groundnuts. Everything inside was only for the treehouse. The password only worked <em>inside</em>. Shout it outside and nothing happened.</p>
+    <p>"Those are <strong>local</strong> things," said Dad. "They live in one place." A local variable is one declared inside a subprogram or function; only that subprogram can see it. This is a form of isolation — the same principle behind encapsulation in object-oriented programming, where objects keep their data and the instructions that manipulate that data together, away from the rest of the program.</p>
+    <p>He pointed at the sun. "The sun is <strong>global</strong>. Everyone can see it." A global variable is declared outside any subprogram, so every part of the program can read and change it.</p>
+    <p>One more rule: when the treehouse was packed away, the groundnuts went with it. Local things go away when their place goes away. That is their <strong>lifetime</strong>. When a subprogram finishes running, its local variables are destroyed and their memory is freed. Global variables last as long as the program runs.</p>
+    <p>"So a variable inside a function," said Kofi, "is a groundnut in a treehouse." "Exactly," said Dad. And just as one subprogram's data should not be messed up by another subprogram's instructions, good programmers keep their variables as local as possible to avoid accidental interference.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Big Idea</h3>
+    <p>Local things live in one place and disappear when that place goes away. Global things are everywhere and last as long as the program. Lifetime is how long a thing lasts; scope is where it can be seen.</p>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It!</h3>
+    <p>Local or global? Your name inside a "say hello" function? The sun? A loop counter? The year? (Answers: local, global, local, global.)</p>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button" data-nav="prev">← Previous</button>
+    <button class="nav-button" data-nav="next">Next →</button>
+  </nav>
+</section>
+
+<!-- ============================ CHAPTER 20 ============================ -->
+<section class="book-page chapter-page" id="ch-20">
+  <header class="chapter-header">
+    <p class="chapter-part">Chapter 20</p>
+    <h2>The Chin-Chin Cutter Family</h2>
+    <p class="chapter-tagline">🥟 Object-Oriented Basics</p>
+  </header>
+
+  <div class="chapter-story">
+    <p>In the kitchen drawer lived a star-shaped chin-chin cutter. It was not a chin-chin. It was the <em>idea</em> of a chin-chin. That is a <strong>class</strong>. A class defines the data stored in an object along with the instructions that manipulate that data — it is a blueprint, not the thing itself. Press it into dough and you get a real star chin-chin. That is an <strong>object</strong>. You can create many objects from one class, just as one cutter can make many chin-chin.</p>
+    <p>Each chin-chin was different. One was golden. One was brown. One had a missing corner. Those are its <strong>properties</strong> (also called data). In a class, properties are the variables that describe what each object is like — its colour, its size, its position, its name.</p>
+    <p>Each chin-chin could do things. It could be decorated. It could be eaten. Things an object can do are its <strong>methods</strong> — the subprograms stored inside the object that manipulate its properties. Keeping data and methods together in one place is called <strong>encapsulation</strong>. It stops one part of a program from accidentally messing with another part's data.</p>
+    <p>One day a new cutter came. It was a star with a little cap on top. It was made from the star cutter and just added a cap. "That is <strong>inheritance</strong>," said the big cutter. "It got everything from me, and then a cap." Inheritance lets a new class reuse all the properties and methods of an existing class without physically copying the code — and you can add new features or rewrite existing methods (which is called <strong>polymorphism</strong>) without touching the original class.</p>
+    <p>One cutter, many chin-chin. Same recipe, each one its own little self. That is the magic of object-oriented programming: define the blueprint once, then stamp out as many independent objects as you need — each with its own data, all sharing the same design.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Big Idea</h3>
+    <p>A class is a plan. An object is one thing made from the plan. Objects have properties (what they are) and methods (what they do). Inheritance lets a new class build on an old one. Encapsulation keeps each object's data safe from the rest of the program.</p>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It!</h3>
+    <p>Make a class called <em>Pet</em>. What properties does it have? Name, colour, legs? What methods? Speak, eat, sleep? Now make two pets. They share the same blueprint but have different names and colours — that is the difference between a class and an object.</p>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button" data-nav="prev">← Previous</button>
+    <button class="nav-button" data-nav="next">Next →</button>
+  </nav>
+</section>
+
+<!-- ============================ CHAPTER 21 ============================ -->
+<section class="book-page chapter-page" id="ch-21">
+  <header class="chapter-header">
+    <p class="chapter-part">Chapter 21</p>
+    <h2>The Lost Cowrie</h2>
+    <p class="chapter-tagline">🔍 Searching and Sorting</p>
+  </header>
+
+  <div class="chapter-story">
+    <p>A cowrie hid in one of one hundred calabashes. "Guess," said Grandpa. "Number 1? No. Number 2? No." That could take all day! That is a <strong>sequential search</strong>: you examine every possible item until you find what you're looking for. It works on sorted and unsorted lists, but for large amounts of data it is slow and cumbersome — like looking for your car keys somewhere in the city of New York.</p>
+    <p>"Let me try," said Kwame. "Is it in 1 to 50?" No. "51 to 75?" No. "76 to 88?" Yes! Each question cut the work in half. Kwame found it in seven guesses. That is <strong>binary search</strong>. A binary search divides a long (previously sorted) list in half, checks the middle, and discards the half that cannot contain the target. Seven guesses is enough for 100 items because 2⁷ = 128. But binary search has one strict rule: the list must already be sorted.</p>
+    <p>Then Grandpa spilled numbered cards. Kwame picked them up and put each one in its place. "That is <strong>sorting</strong>," said Grandpa. "Putting things in order." There are many sorting algorithms: insertion sort (good for small lists), bubble sort (good when the list is almost sorted), shell sort (a divide-and-conquer speed-up), and quicksort (usually fastest for everyday use). Choosing the right one can make a program run quickly; choosing the wrong one can make it seem unbearably slow.</p>
+    <p>"An <strong>algorithm</strong> is a plan," said Kwame. "And <strong>efficiency</strong> is using few steps." Computer scientists measure efficiency with Big-O notation — a way to express how an algorithm's speed grows as the number of items grows. "Yes," said Grandpa. "Fewer steps means more time for chin-chin!"</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Big Idea</h3>
+    <p>An algorithm is a step-by-step plan. Searching finds one thing. Sorting puts things in order. Few steps is better than many steps — and Big-O notation lets us measure just how few.</p>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It!</h3>
+    <p>Play guess-the-number from 1 to 100. Cut the numbers in half each time. Can you win in seven guesses? (Yes — if you always guess the middle of the remaining range.)</p>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button" data-nav="prev">← Previous</button>
+    <button class="nav-button" data-nav="next">Next →</button>
+  </nav>
+</section>
+
+<!-- ============================ CHAPTER 22 ============================ -->
+<section class="book-page chapter-page" id="ch-22">
+  <header class="chapter-header">
+    <p class="chapter-part">Chapter 22</p>
+    <h2>The Calabash Inside the Calabash</h2>
+    <p class="chapter-tagline">🏺 Recursion</p>
+  </header>
+
+  <div class="chapter-story">
+    <p>Aisha opened a big calabash. Inside was a smaller one. She opened that one. Inside was a smaller one still! And inside that one — another!</p>
+    <p>"How many are there?" she asked. Grandma said, "Open one, then ask the one inside. It will ask the one inside it." Aisha laughed. "But that never stops!"</p>
+    <p>"It stops," said Grandma, "because the tiniest calabash does not open. It just says 'one.' That is the <strong>base case</strong>." A base case is the one situation where the function does not call itself — it simply returns a fixed answer. Without it, the function would keep calling itself forever and the program would crash.</p>
+    <p>So the big one said "one plus what is inside." The next said the same. Until the tiny one said "one." Then the answers ran back up. A function that calls itself is called <strong>recursion</strong>. Recursion is used in algorithms like quicksort, where a subprogram repeatedly runs itself on smaller and smaller pieces of the same problem. The pattern is always the same: a <em>recursive case</em> that breaks the problem into a smaller copy of itself, and a <em>base case</em> that stops the chain.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Big Idea</h3>
+    <p>Recursion is when something calls itself. It always needs a base case so it can stop — otherwise it runs forever, like a calabash that never bottoms out.</p>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It!</h3>
+    <p>Count down out loud: "3, then count from 2, then count from 1, then count from 0 — stop!" Which part was the base case? (Counting from 0: stop.) Which part was the recursive case? (Counting from any number greater than 0: "count from one less.")</p>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button" data-nav="prev">← Previous</button>
+    <button class="nav-button" data-nav="next">Next →</button>
+  </nav>
+</section>
+
+<!-- ============================ CHAPTER 23 ============================ -->
+<section class="book-page chapter-page" id="ch-23">
+  <header class="chapter-header">
+    <p class="chapter-part">Chapter 23</p>
+    <h2>The Wobbly Bug</h2>
+    <p class="chapter-tagline">🐛 Bugs and Debugging</p>
+  </header>
+
+  <div class="chapter-story">
+    <p>Chidi made a game. A little goat runs on the screen. But when he pressed play, the goat ran backwards and fell off! "It's broken!" he cried.</p>
+    <p>His sister looked. "You have a <strong>bug</strong>. A bug is one little mistake. Let's find it." A bug is any problem that keeps a program from working correctly. Bugs fall into three families: <strong>syntax errors</strong> (typos and missing punctuation), <strong>run-time errors</strong> (the program crashes when it meets unexpected data), and <strong>logic errors</strong> (the program runs but does the wrong thing).</p>
+    <p>They played the game again. The goat fell off every time. Good! A bug you can see again is easy to catch. This is called testing boundary conditions — trying extremely high and extremely low values to see what breaks.</p>
+    <p>They looked at the lines. There it was! A minus sign where a plus sign should be — a logic error. They fixed it. The goat ran the right way!</p>
+    <p>"Fixing a bug is called <strong>debugging</strong>," said his sister. "Then you play again to be sure." The best debugging tools are <em>stepping</em> (running the program line by line), <em>breakpoints</em> (stopping at a chosen line), and <em>watching</em> (checking a variable's value as the program runs). No program is ever 100 percent bug-free — but debugging makes it good enough for people to actually use.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Big Idea</h3>
+    <p>A bug is a mistake. To fix it: make it happen again, find it, fix it, and test again. Bugs come in three families — syntax, run-time, and logic. Programs rarely work perfectly the first time.</p>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It!</h3>
+    <p>Here is a silly recipe: "Put water in the cup. Get a cup. Drink." What is wrong? What should come first? That is a logic error — the steps work, but they are in the wrong order.</p>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button" data-nav="prev">← Previous</button>
+    <button class="nav-button" data-nav="next">Next →</button>
+  </nav>
+</section>
+
+<!-- ============================ CHAPTER 24 ============================ -->
+<section class="book-page chapter-page" id="ch-24">
+  <header class="chapter-header">
+    <p class="chapter-part">Chapter 24</p>
+    <h2>The Tester's Tea Party</h2>
+    <p class="chapter-tagline">🫖 Testing</p>
+  </header>
+
+  <div class="chapter-story">
+    <p>Temi made clay teacups. "They are done!" she said. "How do you know?" asked her aunt. Temi blinked. She had not checked!</p>
+    <p>So Temi tested them. She poured in hot tea. She poured in cold tea. She filled one to the top. She held one upside down. She even gave one to the goat!</p>
+    <p>One cup leaked. One handle broke. Temi wrote down each problem and fixed it. Then she tested again.</p>
+    <p>"Testing is checking what really happens," said her aunt. "Test the normal things. Then test the silly things." Programmers call this testing boundary conditions: give your program extremely high and extremely low numbers. If your program expects a person's age, try 0, try a huge number like 60,000, and try a negative number. That is how you smoke out run-time errors before real users find them.</p>
+    <p>Professional programmers go further. During <strong>alpha testing</strong>, you test your own program. During <strong>beta testing</strong>, you give copies to strangers so they can find bugs your friends are too polite to mention. No program is ever 100 percent bug-free — mathematics makes that impossible — but testing makes it good enough for people to actually use.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Big Idea</h3>
+    <p>Testing means checking your work. Try normal things, big things, and silly things. A slow, bloated program that works is better than a small, fast program that doesn't.</p>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It!</h3>
+    <p>Imagine a machine that adds numbers. What should it do with 0 + 0? With 99 + 1? With 5 + 3? Guess first, then check. What happens if you give it letters instead of numbers?</p>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button" data-nav="prev">← Previous</button>
+    <button class="nav-button" data-nav="next">Next →</button>
+  </nav>
+</section>
+
+<!-- ============================ CHAPTER 25 ============================ -->
+<section class="book-page chapter-page" id="ch-25">
+  <header class="chapter-header">
+    <p class="chapter-part">Chapter 25</p>
+    <h2>The Rickshaw Tune-Up</h2>
+    <p class="chapter-tagline">🛺 Optimization</p>
+  </header>
+
+  <div class="chapter-story">
+    <p>A rickshaw driver finished his work. The rickshaw worked — but it was slow, heavy, and gulped petrol. "It works!" he said. "Why tune it?" His friend, a mechanic, laughed. "Because a slow rickshaw that works is worse than a fast one that works just as well."</p>
+    <p>Optimization means making a program <strong>faster</strong>, <strong>smaller</strong>, and <strong>less memory-hungry</strong> — without breaking it. The first step is choosing the right <strong>data structure</strong>: a dynamic array that grows as needed wastes less memory than a giant static array mostly filled with empty space. The second step is choosing the right <strong>algorithm</strong>: quicksort sorts 30,000 names much faster than bubble sort; binary search finds a name much faster than sequential search (but only if the list is sorted first).</p>
+    <p>The third step is <strong>fine-tuning the source code</strong>. Put the condition most likely to be false first in an AND expression — if the first is false, the computer skips checking the second. Put the condition most likely to be true first in an IF-ELSEIF or SELECT CASE statement — the computer finds a match sooner. Don't use a FOR-NEXT loop when a WHILE loop can stop early. Remove instructions from loops that don't need to repeat. Use the smallest data type that fits your values. Use built-in commands whenever possible.</p>
+    <p>Finally, you can <strong>use a faster language</strong> (C++ runs faster than BASIC) or <strong>optimize your compiler</strong> (turn on speed settings, though some turn off error-checking). But remember: a slow, bloated program that works is better than a small, fast one that doesn't. Optimize after it works, not before.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Big Idea</h3>
+    <p>Optimization makes a working program faster, smaller, and leaner. Choose the right data structure and algorithm. Fine-tune your source code. Use built-in commands. But never optimize a program that doesn't work yet.</p>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It!</h3>
+    <p>Imagine searching for a word in a dictionary. Do you start at page 1 and read every page (sequential search), or do you open to the middle and flip left or right (binary search)? Which is faster? Now imagine the dictionary is unsorted — which search can you still use?</p>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button" data-nav="prev">← Previous</button>
+    <button class="nav-button" data-nav="next">Next →</button>
+  </nav>
+</section>
+
+<!-- ============================ CHAPTER 26 ============================ -->
+<section class="book-page chapter-page" id="ch-26">
+  <header class="chapter-header">
+    <p class="chapter-part">Chapter 26</p>
+    <h2>The Shop Counter and the Bell</h2>
+    <p class="chapter-tagline">🔔 User Interface and Events</p>
+  </header>
+
+  <div class="chapter-story">
+    <p>A shop had a plain counter with a sign: "Type what you want." Customers typed letters and sometimes made spelling mistakes. If they typed the wrong word, the counter did nothing to help. That is a <strong>command-line interface</strong> — old-fashioned, fussy, and easy to get wrong.</p>
+    <p>Then the shopkeeper redesigned the counter. Now there was a window with <strong>buttons</strong> ("Buy," "Sell"), <strong>check boxes</strong> ("Gift wrap?"), <strong>radio buttons</strong> ("Small / Medium / Large" — pick one), <strong>list boxes</strong> (choose a flavour), <strong>combo boxes</strong> (pick or type), and <strong>text boxes</strong> (type your name). Pull-down menus at the top let you pick a command. That is a <strong>graphical user interface</strong> — friendly, visual, and hard to get wrong.</p>
+    <p>On the door hung a bell. When a customer opened the door, the bell rang. The shopkeeper looked up and said, "Welcome!" The ring is an <strong>event</strong>; what the shopkeeper does is the <strong>event handler</strong>. Programs have bells too: a mouse click (onClick), a key press (onKeyPress), a focus change (onFocus, onBlur), a text change (onChange), a mouse-over (onMouseOver), a mouse-out (onMouseOut), and a text selection (onSelect).</p>
+    <p>Waiting for something to happen is called being <strong>event-driven</strong>. Instead of running a fixed list of steps from top to bottom once, the program sits and waits, then responds to whatever the user does. That is how every modern app works — buttons, menus, check boxes, and text fields all wait for their events.</p>
+    <p>In REALbasic and Revolution, you design the interface by dragging controls onto a window and then write subprograms that run when events happen. In Liberty BASIC and C++, you write code to create every button, menu, and box — more work, but the same idea: the interface is the middleman between the user and the program.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Big Idea</h3>
+    <p>A user interface is how the user talks to the program. A GUI uses windows, menus, and controls (buttons, check boxes, radio buttons, list boxes, text boxes). An event is something that happens; an event handler is what the program does in response. Programs that wait for events are called event-driven.</p>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It!</h3>
+    <p>Look at a game or app you use. Name three events (touch, click, key press) and what happens when each occurs. What is the "bell"? What is the "handler"? Now design a simple window with three controls — a text box, a check box, and a button.</p>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button" data-nav="prev">← Previous</button>
+    <button class="nav-button" data-nav="next">Next →</button>
+  </nav>
+</section>
+
+<!-- ============================ CHAPTER 27 ============================ -->
+<section class="book-page chapter-page" id="ch-27">
+  <header class="chapter-header">
+    <p class="chapter-part">Chapter 27</p>
+    <h2>The Backpack, the Line and the Plates</h2>
+    <p class="chapter-tagline">🎒 Data Structures</p>
+  </header>
+
+  <div class="chapter-story">
+    <p>Four friends carried things in different ways.</p>
+    <p><strong>Map</strong> had a backpack with named pockets. "Pencils" went in one. "Snack" went in another. You asked for a pocket by name. Quick! That is a <strong>dictionary</strong> (also called an associative array). Instead of looking things up by number, you look them up by key. Choosing the right data structure matters: a map is fast when you know the name of what you want, but wasteful if you just need an ordered list.</p>
+    <p><strong>Set</strong> had a bag with a rule: no two the same. Two red marbles? Only one went in. "I just want to know if it is in there," said Set. Sets are perfect for membership tests and for removing duplicates.</p>
+    <p><strong>Stack</strong> carried plates. You put one on top. You take one off the top. Last in, first out (LIFO). The undo button in a program is a stack: the most recent action is the first one undone.</p>
+    <p><strong>Queue</strong> stood in a line at the tap. First in, first out (FIFO). "Good for taking turns," said Queue. A printer queue works this way: the first job sent is the first job printed. Choosing the wrong data structure can make a working program slow and memory-hungry — the right one makes it fast and lean.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Big Idea</h3>
+    <p>A map looks things up by name. A set has no duplicates. A stack is last in, first out. A queue is first in, first out. Each structure is a different tool for a different job.</p>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It!</h3>
+    <p>Which is which? The undo button (stack). Jobs waiting for a printer (queue). A phone book (map). A list of people who already voted (set — no one votes twice).</p>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button" data-nav="prev">← Previous</button>
+    <button class="nav-button" data-nav="next">Next →</button>
+  </nav>
+</section>
+
+<!-- ============================ CHAPTER 28 ============================ -->
+<section class="book-page chapter-page" id="ch-28">
+  <header class="chapter-header">
+    <p class="chapter-part">Chapter 28</p>
+    <h2>The Painted Signboard</h2>
+    <p class="chapter-tagline">🪧 HTML</p>
+  </header>
+
+  <div class="chapter-story">
+    <p>A signboard painter had a strange rule. Every mark he made had to be wrapped in brackets. <code>&lt;b&gt;</code> for bold. <code>&lt;i&gt;</code> for italic. <code>&lt;h1&gt;</code> for a big heading. Most marks came in pairs: <code>&lt;b&gt;bold&lt;/b&gt;</code>. The second bracket had a slash — that meant "stop." These brackets are called <strong>tags</strong>, and the language they make is <strong>HTML</strong> (HyperText Markup Language).</p>
+    <p>Every signboard had the same skeleton: <code>&lt;HTML&gt;</code> at the top and bottom, <code>&lt;HEAD&gt;</code> for the title, <code>&lt;BODY&gt;</code> for everything you actually see. Inside the body, the painter used headings <code>&lt;H1&gt;</code> through <code>&lt;H6&gt;</code>, paragraphs <code>&lt;P&gt;</code>, quotes <code>&lt;BLOCKQUOTE&gt;</code>, bold <code>&lt;B&gt;</code>, italic <code>&lt;I&gt;</code>, underline <code>&lt;U&gt;</code>, typewriter <code>&lt;TT&gt;</code>, and horizontal rules <code>&lt;HR&gt;</code>.</p>
+    <p>He could add <strong>attributes</strong> inside the first tag to change how things looked. <code>ALIGN="center"</code> centred the text. <code>BGCOLOR="white"</code> painted the background. <code>TEXT="black"</code> set the text colour. <code>LINK</code> and <code>VLINK</code> coloured hyperlinks (visited and unvisited).</p>
+    <p>He could make three kinds of lists: <strong>unordered</strong> <code>&lt;UL&gt;</code> with bullets, <strong>ordered</strong> <code>&lt;OL&gt;</code> with numbers, and <strong>definition</strong> <code>&lt;DL&gt;</code> with indented terms and definitions. He could make <strong>hyperlinks</strong> with <code>&lt;A HREF="..."&gt;click me&lt;/A&gt;</code> to jump to another page, or <code>&lt;A NAME="..."&gt;</code> to anchor a spot on the same page. He could display <strong>pictures</strong> with <code>&lt;IMG SRC="..."&gt;</code>, align text next to pictures with <code>ALIGN</code>, and paint a background picture with <code>BACKGROUND="..."</code>.</p>
+    <p>And when he wanted to ask the visitor something, he painted a <strong>form</strong> with <code>&lt;FORM&gt;</code>: text boxes for typing <code>TYPE="text"</code>, buttons for clicking <code>TYPE="button"</code>, check boxes for ticking <code>TYPE="checkbox"</code>, and radio buttons for choosing one <code>TYPE="radio"</code>. Every control could have an event like <code>onClick</code> — the same bells and handlers from the last chapter, now painted on a signboard.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Big Idea</h3>
+    <p>HTML wraps content in tags. Most tags come in pairs: an opening tag and a closing tag with a slash. Tags can carry attributes that change appearance. HTML can make headings, paragraphs, lists, hyperlinks, images, and forms — the building blocks of every web page.</p>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It!</h3>
+    <p>Write a tiny HTML page on paper. Use <code>&lt;HTML&gt;</code>, <code>&lt;HEAD&gt;&lt;TITLE&gt;</code>, <code>&lt;BODY&gt;</code>, one heading, one paragraph, one bold word, and one list. Then try it in a real editor and save it as <code>.html</code> — open it in a browser to see your signboard.</p>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button" data-nav="prev">← Previous</button>
+    <button class="nav-button" data-nav="next">Next →</button>
+  </nav>
+</section>
+
+<!-- ============================ CHAPTER 29 ============================ -->
+<section class="book-page chapter-page" id="ch-29">
+  <header class="chapter-header">
+    <p class="chapter-part">Chapter 29</p>
+    <h2>The Talking Signboard</h2>
+    <p class="chapter-tagline">💬 JavaScript</p>
+  </header>
+
+  <div class="chapter-story">
+    <p>The painted signboard from Chapter 28 was pretty, but it could not talk back. It showed the same thing to everyone. Then a clever painter added a small script box: <code>&lt;script language="JavaScript"&gt;</code>. Now the signboard could think.</p>
+    <p>Inside the script box, the painter could write <code>document.write("Hello!")</code> to paint text onto the page. He could make <strong>variables</strong> with <code>var mymessage</code> and join strings with <code>+</code>. He could make <strong>dialog boxes</strong>: an <code>alert()</code> to shout a warning, a <code>confirm()</code> to ask a yes-or-no question, and a <code>prompt()</code> to ask for input and store it in a variable.</p>
+    <p>He could make <strong>functions</strong> — small subprograms that accept data and return a result, just like Femi the Function. <code>function square(number) { return number * number }</code> doubles a number with one line. He could <strong>open windows</strong> with <code>window.open("index.html")</code>, decide their size and whether they show toolbars, and <strong>close</strong> them with <code>windowName.close()</code>.</p>
+    <p>And he could attach scripts to <strong>events</strong>: <code>onClick</code>, <code>onChange</code>, <code>onFocus</code>, <code>onBlur</code>, <code>onMouseOver</code>. When the user clicked a button, the script ran. The bell rang; the handler answered. The signboard was no longer just painted — it was <em>alive</em>.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Big Idea</h3>
+    <p>JavaScript makes web pages interactive. It can display text, store variables, show dialog boxes, define functions, open and close windows, and respond to events. It is the language of the talking signboard.</p>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It!</h3>
+    <p>Write a JavaScript function called <em>greet(name)</em> that displays "Hello, [name]!" using <code>alert()</code>. Attach it to a button with <code>onClick</code>. Now you have a talking signboard.</p>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button" data-nav="prev">← Previous</button>
+    <button class="nav-button" data-nav="next">Next →</button>
+  </nav>
+</section>
+
+<!-- ============================ CHAPTER 30 ============================ -->
+<section class="book-page chapter-page" id="ch-30">
+  <header class="chapter-header">
+    <p class="chapter-part">Chapter 30</p>
+    <h2>The Applet in the Window</h2>
+    <p class="chapter-tagline">🪟 Java Applets</p>
+  </header>
+
+  <div class="chapter-story">
+    <p>Inside the talking signboard, the painter sometimes hung a tiny window. Inside the window lived a little clock, or a game, or an animation. That little window is an <strong>applet</strong> — a miniature program written in Java that runs inside a web browser.</p>
+    <p>Java works differently from C++. C++ compiles a program directly into machine code for one processor. Java compiles a program into <strong>byte code</strong> — a kind of universal machine language. To run byte code, the computer needs a special program called the <strong>Java Virtual Machine</strong> (VM). Install the VM on Windows, Mac, or Linux, and the same byte code runs on all of them without changes. That is Java's promise: write once, run anywhere.</p>
+    <p>To hang an applet in a web page, the painter used <code>&lt;APPLET CODE="Message.class"&gt;</code>. He could set the size with <code>WIDTH=300 HEIGHT=180</code>. He could align text with <code>ALIGN=top</code>, <code>ALIGN=middle</code>, or <code>ALIGN=bottom</code>. He could push text away with <code>HSPACE</code> (horizontal space) and <code>VSPACE</code> (vertical space). And he could put fallback text between the opening and closing tags — text that appeared only if the browser could not run Java.</p>
+    <p>Java and JavaScript are not the same. JavaScript is easy, lives inside the browser, and handles small tasks. Java is more powerful, runs on its own VM, and handles big ones. Use JavaScript for a quick button response; use Java for a full-blown animation. Use both together and you get the best of both worlds.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Big Idea</h3>
+    <p>A Java applet is a miniature Java program that runs inside a web browser. Java compiles to byte code and runs on any computer with a Java Virtual Machine. Use <code>&lt;APPLET&gt;</code> tags to add one to a page. JavaScript is smaller and simpler; Java is more powerful.</p>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It!</h3>
+    <p>Compare two tasks: changing a button's colour when clicked (JavaScript) versus drawing a moving clock on the page (Java applet). Which language fits which task? Now imagine writing <code>&lt;APPLET CODE="Clock.class" WIDTH=200 HEIGHT=100 HSPACE=10 VSPACE=10&gt;</code>. What would you see on the page?</p>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button" data-nav="prev">← Previous</button>
+    <button class="nav-button" data-nav="next">The End →</button>
+  </nav>
+</section>
+
+<!-- ============================ BACK COVER ============================ -->
+<section class="book-page cover-page back-cover" id="back-cover">
+  <div class="cover-content">
+    <p class="cover-series">30 Tiny Tales</p>
+    <h1>The End</h1>
+    <p class="cover-subtitle">Chapter 30 of 30</p>
+    <p class="closing-line">✦</p>
+    <p class="cover-note">
+      Thirty small stories. Thirty large ideas. May the computer never again
+      be a mystery — only a machine that does exactly what you tell it.
+    </p>
+    <p class="cover-credit">
+      Credit <a href="https://agunechemba.name.ng">Agunechemba Ekene</a>
+    </p>
+  </div>
+  <nav class="book-nav">
+    <button class="nav-button" data-nav="prev">← Back to Chapter 30</button>
+    <button class="nav-button" data-nav="first">Start Over</button>
+  </nav>
+</section>
+
 </body>
 </html>
