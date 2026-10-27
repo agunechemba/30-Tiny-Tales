@@ -32,4 +32,6 @@ Written by [Agunechemba Ekene](https://agunechemba.name.ng).
 
 ---
 
+# [READ BOOK](https://agunechemba.name.ng/30-Tiny-Tales/story-30.html)
+
 *Thirty small stories. Thirty large ideas. May the computer never again be a mystery — only a machine that does exactly what you tell it.*
