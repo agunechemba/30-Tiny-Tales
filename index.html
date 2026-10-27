@@ -33,7 +33,56 @@
   <nav class="book-nav">
     <button class="nav-button" data-nav="next">Begin Reading →</button>
   </nav>
+    <p class="cover-credit">
+      Author <a href="https://agunechemba.name.ng">Agunechemba Ekene</a>
+    </p>
 </section>
+
+
+
+<!-- ============================ DEDICATION ============================ -->
+<section class="book-page cover-page dedication-page" id="dedication">
+  <div class="cover-content">
+    <p class="cover-series">Dedication</p>
+    <h1>For Oyin, Ola,<br>Makuo and Achebe</h1>
+    <p class="cover-subtitle">who ask the best questions</p>
+    <p class="closing-line">✦</p>
+    <p class="cover-note">
+      This book was written for you,
+      and is dedicated to you.
+      May you always keep asking how things work —
+      and may you one day write better answers than these.
+    </p>
+  </div>
+  <nav class="book-nav">
+    <button class="nav-button" data-nav="prev">← Cover</button>
+    <button class="nav-button" data-nav="next">Preface →</button>
+  </nav>
+</section>
+
+<!-- ============================ PREFACE ============================ -->
+<section class="book-page chapter-page" id="preface">
+  <header class="chapter-header">
+    <p class="chapter-part">Preface</p>
+    <h2>Before We Begin</h2>
+    <p class="chapter-tagline">📖 Why thirty tiny tales</p>
+  </header>
+
+  <div class="chapter-story">
+    <p>This book began with a question. A child looked up from a screen and asked, “But how does the computer <em>know</em>?” The honest answer — that it doesn't, unless someone tells it, step by step — was too long for bedtime. So it became thirty small stories instead.</p>
+    <p>Each tale takes one idea from the world of programming and dresses it in something familiar: a jigsaw puzzle, a robot's breakfast, a jar with a wax seal, a train of cake boxes, a calabash inside a calabash. None of the stories is a textbook. They are meant to be read aloud, one a night, and argued about at the dinner table.</p>
+    <p>The ideas, though, are the real ones — computational thinking, variables, loops, functions, arrays, recursion, debugging, optimization, HTML, JavaScript, Java applets. By the last page, the vocabulary of programming should feel less like a foreign language and more like a set of proverbs you already knew.</p>
+    <p>You do not need a computer to read this book. A pencil, some paper, and a willingness to ask “what if?” are enough. The <strong>Try It!</strong> sections at the end of each chapter are there to be done, not skipped — they are where the stories become yours.</p>
+    <p>If a single story makes you pause and say, “Oh — so <em>that's</em> what that means,” then the book has done its work.</p>
+    <p class="preface-signature">— Agunechemba Ekene<br><a href="https://agunechemba.name.ng">agunechemba.name.ng</a></p>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button" data-nav="prev">← Dedication</button>
+    <button class="nav-button" data-nav="next">Contents →</button>
+  </nav>
+</section>
+
 
 <!-- ============================ TABLE OF CONTENTS ============================ -->
 <section class="book-page toc-page" id="contents">
@@ -44,6 +93,14 @@
   </header>
 
   <div class="toc-part">
+
+     <div class="toc-part">
+    <h3>Front Matter</h3>
+    <ol>
+      <li><a href="#dedication">Dedication</a></li>
+      <li><a href="#preface">Preface — Before We Begin</a></li>
+    </ol>
+  </div>
     <h3>Chapters</h3>
     <ol>
       <li><a href="#ch-01">The Baobab Puzzle — Computational thinking</a></li>
@@ -78,9 +135,15 @@
       <li><a href="#ch-30">The Applet in the Window — Java applets</a></li>
     </ol>
   </div>
-
+  <div class="toc-part">
+    <h3>Back Matter</h3>
+    <ol>
+      <li><a href="#appendix">Appendix — Key Terms</a></li>
+    </ol>
+  </div>
+   
   <nav class="book-nav">
-    <button class="nav-button" data-nav="prev">← Cover</button>
+    <button class="nav-button" data-nav="prev">← Preface</button>
     <button class="nav-button" data-nav="next">Chapter 1 →</button>
   </nav>
 </section>
@@ -1029,10 +1092,106 @@
 
   <nav class="book-nav">
     <button class="nav-button" data-nav="prev">← Previous</button>
-    <button class="nav-button" data-nav="next">The End →</button>
+    <button class="nav-button" data-nav="next">Next →</button>
   </nav>
 </section>
 
+
+<!-- ============================ APPENDIX ============================ -->
+<section class="book-page chapter-page appendix-page" id="appendix">
+  <header class="chapter-header">
+    <p class="chapter-part">Appendix</p>
+    <h2>Key Terms</h2>
+    <p class="chapter-tagline">📚 A glossary of the ideas in this book</p>
+  </header>
+
+  <div class="appendix-glossary">
+    <p><strong>Algorithm</strong> — A step-by-step plan for solving a problem; the recipe a computer follows.</p>
+    <p><strong>API (Application Programming Interface)</strong> — The agreed set of names, inputs, and outputs for asking someone else's code to do something for you.</p>
+    <p><strong>Argument</strong> — The actual value you pass into a subprogram when you call it; it fills one of the parameters.</p>
+    <p><strong>Array</strong> — One variable that holds a list of items of the same data type, each reached by its index.</p>
+    <p><strong>Assignment</strong> — Putting a value into a variable, usually written with an equals sign: <code>score = 10</code>.</p>
+    <p><strong>Base case</strong> — The stopping condition of a recursive function; the smallest case that returns an answer without calling itself again.</p>
+    <p><strong>Beta testing</strong> — Giving a nearly finished program to strangers so they can find the bugs your friends are too polite to mention.</p>
+    <p><strong>Binary search</strong> — Finding an item in a sorted list by halving the range again and again; fast, but only on sorted data.</p>
+    <p><strong>Boolean</strong> — A data type with exactly two possible values: true or false.</p>
+    <p><strong>Bug</strong> — A mistake in a program that makes it crash, freeze, or do the wrong thing.</p>
+    <p><strong>Byte code</strong> — A universal intermediate language produced by the Java compiler and run by the Java Virtual Machine on any computer.</p>
+    <p><strong>Class</strong> — A blueprint describing the data (properties) and behaviour (methods) shared by a kind of object.</p>
+    <p><strong>Compiler</strong> — A tool that translates the whole program into machine code once and saves it as a separate runnable file.</p>
+    <p><strong>Computational thinking</strong> — Solving big problems by breaking them into small ones, spotting what is the same, ignoring what doesn't matter, and planning in steps.</p>
+    <p><strong>Constant</strong> — A named value that never changes while the program runs.</p>
+    <p><strong>Data structure</strong> — A way of organising data — array, map, set, stack, queue — chosen to suit the job.</p>
+    <p><strong>Data type</strong> — The kind of value a variable holds: number, string, Boolean, and so on.</p>
+    <p><strong>Debugger</strong> — A tool that lets you step through a program line by line, pause at breakpoints, and watch variables change.</p>
+    <p><strong>Debugging</strong> — The work of finding and fixing bugs.</p>
+    <p><strong>Declaration</strong> — The statement that introduces a variable or constant and gives its name and type.</p>
+    <p><strong>Editor</strong> — The plain-text tool where you type and save source code.</p>
+    <p><strong>Element</strong> — One item inside an array or list.</p>
+    <p><strong>Encapsulation</strong> — Keeping an object's data and the methods that manipulate it together, safe from the rest of the program.</p>
+    <p><strong>Event</strong> — Something that happens while a program runs: a click, a key press, a page finishing loading.</p>
+    <p><strong>Event handler</strong> — The piece of code that runs in response to an event.</p>
+    <p><strong>Expression</strong> — A combination of values, variables, and operators that produces a new value.</p>
+    <p><strong>Function</strong> — A subprogram that performs a task and returns a value.</p>
+    <p><strong>Global variable</strong> — A variable declared outside every subprogram, visible to the whole program and alive for as long as it runs.</p>
+    <p><strong>GUI (Graphical User Interface)</strong> — A user interface built from windows, menus, buttons, check boxes, and other visual controls.</p>
+    <p><strong>HTML (HyperText Markup Language)</strong> — The tag language that describes the structure and appearance of a web page.</p>
+    <p><strong>IDE (Integrated Development Environment)</strong> — A single program that bundles an editor, a compiler or interpreter, and a debugger.</p>
+    <p><strong>Index</strong> — The position number of an element in an array; in most languages the first index is 0.</p>
+    <p><strong>Inheritance</strong> — Building a new class on an existing one, reusing its properties and methods and adding or changing only what is different.</p>
+    <p><strong>Input</strong> — Data that goes into a program: keystrokes, clicks, a file, a sensor reading.</p>
+    <p><strong>Interpreter</strong> — A tool that translates and runs a program one line at a time, and must do it again every time the program runs.</p>
+    <p><strong>Iteration</strong> — Repeating a set of instructions; looping.</p>
+    <p><strong>JavaScript</strong> — The scripting language that makes web pages interactive inside the browser.</p>
+    <p><strong>Library</strong> — A collection of ready-made, tested subprograms stored in a separate file and reused in your program.</p>
+    <p><strong>Lifetime</strong> — How long a variable exists in memory, from the moment it is created to the moment it is destroyed.</p>
+    <p><strong>Local variable</strong> — A variable declared inside a subprogram, visible only there, and destroyed when the subprogram ends.</p>
+    <p><strong>Logic error</strong> — A bug where the program runs without crashing but does the wrong thing.</p>
+    <p><strong>Loop</strong> — A structure that repeats instructions: <em>for</em> when you know the count, <em>while</em> or <em>until</em> when a condition decides.</p>
+    <p><strong>Method</strong> — A subprogram that belongs to an object and works on that object's data.</p>
+    <p><strong>Object</strong> — One concrete thing made from a class, with its own copy of the data.</p>
+    <p><strong>Object-oriented programming</strong> — Organising a program around classes and objects, using encapsulation, inheritance, and polymorphism.</p>
+    <p><strong>Operator</strong> — A symbol that performs an action: + − * / for arithmetic, &gt; &lt; == for comparison, AND OR NOT for logic.</p>
+    <p><strong>Output</strong> — The result a program gives back to the user.</p>
+    <p><strong>Parameter</strong> — A named slot in a subprogram's definition that receives a value when the subprogram is called.</p>
+    <p><strong>p-code</strong> — Intermediate code produced by a hybrid compiler and finished by a run-time program on each machine; Java's byte code is the famous example.</p>
+    <p><strong>Polymorphism</strong> — Redefining a method in a subclass so the same name behaves differently for different objects.</p>
+    <p><strong>Procedure</strong> — A subprogram that performs a task but returns no value.</p>
+    <p><strong>Program</strong> — An ordered list of instructions that tells a computer what to do.</p>
+    <p><strong>Programming language</strong> — A formal language for writing instructions a computer can execute.</p>
+    <p><strong>Pseudocode</strong> — Plain-English steps that describe a program's logic before any real syntax is written.</p>
+    <p><strong>Queue</strong> — A first-in, first-out data structure; like a line at the tap.</p>
+    <p><strong>Recursion</strong> — A subprogram calling itself on a smaller version of the same problem until a base case stops it.</p>
+    <p><strong>Return value</strong> — The result a function hands back to whoever called it.</p>
+    <p><strong>Run-time error</strong> — A bug that makes the program crash while it is running.</p>
+    <p><strong>Scope</strong> — The part of a program where a variable's name can be seen and used.</p>
+    <p><strong>Sequential search</strong> — Checking every item in turn until you find the one you want; works on unsorted data, but slowly.</p>
+    <p><strong>Set</strong> — A collection that never holds duplicates.</p>
+    <p><strong>Sorting</strong> — Arranging data in order so that it can be searched, read, and used efficiently.</p>
+    <p><strong>Source code</strong> — The text of a program as the programmer wrote it, before translation.</p>
+    <p><strong>Stack</strong> — A last-in, first-out data structure; like a pile of plates, or the undo button.</p>
+    <p><strong>Statement</strong> — A single instruction in a program, usually written on one line.</p>
+    <p><strong>String</strong> — A sequence of characters treated as text; <code>"53"</code> is a string, <code>53</code> is a number.</p>
+    <p><strong>Subprogram</strong> — A small named program that solves one task and can be called from elsewhere; either a procedure or a function.</p>
+    <p><strong>Syntax</strong> — The grammar rules of a programming language.</p>
+    <p><strong>Syntax error</strong> — A mistake in spelling or punctuation that stops a program from running at all.</p>
+    <p><strong>Testing</strong> — Checking what a program actually does, with normal values, extreme values, and silly values.</p>
+    <p><strong>Top-down design</strong> — Breaking a big problem into smaller and smaller pieces until each piece is simple enough to write.</p>
+    <p><strong>Two-dimensional array</strong> — An array of arrays; a grid of rows and columns.</p>
+    <p><strong>Variable</strong> — A named box in memory that holds one value at a time, and whose contents can change.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Big Idea</h3>
+    <p>Programming is a vocabulary as much as a skill. Learn the words, and the machine stops being a mystery — it becomes a thing you can describe, and therefore a thing you can command.</p>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button" data-nav="prev">← Previous</button>
+    <button class="nav-button" data-nav="next">Next →</button>
+  </nav>
+</section>
+   
 <!-- ============================ BACK COVER ============================ -->
 <section class="book-page cover-page back-cover" id="back-cover">
   <div class="cover-content">
@@ -1045,11 +1204,11 @@
       be a mystery — only a machine that does exactly what you tell it.
     </p>
     <p class="cover-credit">
-      Credit <a href="https://agunechemba.name.ng">Agunechemba Ekene</a>
+      Author <a href="https://agunechemba.name.ng">Agunechemba Ekene</a>
     </p>
   </div>
   <nav class="book-nav">
-    <button class="nav-button" data-nav="prev">← Back to Chapter 30</button>
+    <button class="nav-button" data-nav="prev">← Previous</button>
     <button class="nav-button" data-nav="first">Start Over</button>
   </nav>
 </section>

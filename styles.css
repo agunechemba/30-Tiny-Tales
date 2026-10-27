@@ -615,3 +615,24 @@ body.js-ready .page-hint.hidden { opacity: 0; }
   }
   .cover-credit a { color: var(--accent-dark); }
 }
+
+
+
+
+/* Preface signature */
+.preface-signature {
+  margin-top: 2rem;
+  font-style: italic;
+  text-align: right;
+}
+.preface-signature a { color: inherit; }
+
+/* Appendix glossary */
+.appendix-glossary p {
+  margin: 0 0 0.7em;
+  line-height: 1.6;
+}
+.appendix-glossary strong { font-weight: 700; }
+
+/* Dedication breathing room */
+.dedication-page .cover-note { max-width: 30em; margin-inline: auto; }
